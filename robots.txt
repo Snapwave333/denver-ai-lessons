@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://snapwave333.github.io/denver-ai-lessons/sitemap.xml

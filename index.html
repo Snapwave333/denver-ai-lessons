@@ -8,16 +8,56 @@
 <meta property="og:title" content="One-on-One AI Lessons in Denver">
 <meta property="og:description" content="Learn to use ChatGPT, Claude and other AI tools for real life and work. $50 per 60 minutes, pay after the session.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://snapwave333.github.io/denver-ai-lessons/">
+<meta property="og:site_name" content="Eli Kenny AI Lessons">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1f5eff">
+<link rel="canonical" href="https://snapwave333.github.io/denver-ai-lessons/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5eff'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='white'%3EAI%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Eli Kenny AI Lessons",
-  "description": "Private one-on-one lessons in ChatGPT, Claude and other AI tools, in person in the Denver metro area or online.",
-  "telephone": "+1-720-507-7846",
-  "areaServed": { "@type": "City", "name": "Denver", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-  "priceRange": "$50 per 60-minute session",
-  "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" }
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://snapwave333.github.io/denver-ai-lessons/#business",
+      "name": "Eli Kenny AI Lessons",
+      "url": "https://snapwave333.github.io/denver-ai-lessons/",
+      "description": "Private one-on-one lessons in ChatGPT, Claude and other AI tools, in person in the Denver metro area or online over Zoom.",
+      "telephone": "+1-720-507-7846",
+      "priceRange": "$50 per 60-minute session",
+      "serviceType": "AI tutoring",
+      "areaServed": [
+        { "@type": "City", "name": "Denver" },
+        { "@type": "City", "name": "Aurora" },
+        { "@type": "City", "name": "Lakewood" },
+        { "@type": "City", "name": "Arvada" },
+        { "@type": "City", "name": "Westminster" },
+        { "@type": "City", "name": "Thornton" },
+        { "@type": "City", "name": "Centennial" },
+        { "@type": "City", "name": "Littleton" },
+        { "@type": "City", "name": "Englewood" },
+        { "@type": "City", "name": "Golden" }
+      ],
+      "address": { "@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US" },
+      "paymentAccepted": "Payment after the session is complete",
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "One-on-one AI lesson, 60 minutes",
+        "price": "50.00",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I need any experience with AI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Lessons start wherever you are, including from zero." } },
+        { "@type": "Question", "name": "When do I pay?", "acceptedAnswer": { "@type": "Answer", "text": "After the session is complete. Nothing is due up front." } },
+        { "@type": "Question", "name": "Where do the lessons happen?", "acceptedAnswer": { "@type": "Answer", "text": "In person at a public place around the Denver metro area that works for both of us, or online over Zoom." } },
+        { "@type": "Question", "name": "How much does a lesson cost?", "acceptedAnswer": { "@type": "Answer", "text": "$50 for a 60-minute one-on-one session. The first 15-minute intro chat is free." } }
+      ]
+    }
+  ]
 }
 </script>
 <style>
@@ -86,9 +126,29 @@
   .contact .btn.alt:hover { background: rgba(255,255,255,.12); }
   footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; text-align: center; }
   :focus-visible { outline: 3px solid #ffbf47; outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: var(--ink); padding: 8px 14px; border-radius: 8px; z-index: 10; }
+  .skip:focus { left: 8px; }
+  .callbar { display: none; }
+  @media (max-width: 640px) {
+    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; gap: 8px; padding: 10px; background: var(--card); border-top: 1px solid var(--line); z-index: 5; }
+    .callbar a { flex: 1; text-align: center; }
+    body { padding-bottom: 72px; }
+    header.top .btn { display: none; }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #12141a; --card: #1b1f27; --ink: #eef0f5; --muted: #a6adbb; --accent: #6b97ff; --accent-dark: #8aaeff; --line: #2b303b; }
+    .btn { color: #0b1020; }
+    .btn.alt { color: var(--accent); }
+    .btn.alt:hover, .btn.alt:focus-visible { background: #1f2a45; }
+    .contact { background: #1b1f27; border: 1px solid var(--line); }
+    .contact .btn { background: #eef0f5; color: #12141a; }
+    .num { color: #0b1020; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#learn">Skip to content</a>
 
 <header class="top">
   <div class="wrap">
@@ -150,11 +210,16 @@
 
     <section id="faq">
       <h2>Questions</h2>
-      <details><summary>Do I need any experience?</summary><p>No. Most people I teach are starting from zero. We begin wherever you are.</p></details>
+      <details><summary>Do I need any experience?</summary><p>No. We begin wherever you are, including from zero.</p></details>
       <details><summary>Do I need to bring anything?</summary><p>Bring a laptop or phone and something you want help with, like an email, a document or a question. Free accounts work fine to start.</p></details>
       <details><summary>Where do the lessons happen?</summary><p>In person at a public place around the Denver metro area that works for both of us, or online over Zoom.</p></details>
       <details><summary>When do I pay?</summary><p>After the session is complete. Nothing up front.</p></details>
-      <details><summary>Can I book more than one session?</summary><p>Yes. Many people book a few sessions over a couple of weeks. Ask when you reach out.</p></details>
+      <details><summary>Can I book more than one session?</summary><p>Yes. You can book a single session or a few over the week. Just ask when you reach out.</p></details>
+    </section>
+
+    <section id="areas">
+      <h2>Where I teach</h2>
+      <p class="sub">In person around the Denver metro area, including Denver, Aurora, Lakewood, Arvada, Westminster, Thornton, Centennial, Littleton, Englewood and Golden. Or online over Zoom from anywhere.</p>
     </section>
 
     <section>
@@ -174,6 +239,11 @@
 <footer>
   <div class="wrap">Eli Kenny &middot; One-on-one AI lessons &middot; Denver, Colorado &middot; (720) 507-7846</div>
 </footer>
+
+<nav class="callbar" aria-label="Contact">
+  <a class="btn" href="tel:+17205077846">Call</a>
+  <a class="btn alt" href="sms:+17205077846?&body=Hi%2C%20I%27d%20like%20to%20book%20an%20AI%20lesson.">Text</a>
+</nav>
 
 </body>
 </html>
