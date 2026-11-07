@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://snapwave333.github.io/denver-ai-lessons/">
 <meta property="og:site_name" content="Eli Kenny AI Training">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#1f5eff">
+<meta name="theme-color" content="#7a3828">
 <link rel="canonical" href="https://snapwave333.github.io/denver-ai-lessons/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5eff'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='white'%3EAI%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
@@ -55,195 +55,27 @@
 }
 </script>
 <style>
-  :root {
-    --bg: #f7f6f2;
-    --card: #ffffff;
-    --ink: #1c1f26;
-    --muted: #5b6270;
-    --accent: #1f5eff;
-    --accent-dark: #1647c4;
-    --line: #e3e1da;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.6;
-  }
-  a { color: var(--accent); }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-  header.top { padding: 18px 0; border-bottom: 1px solid var(--line); background: var(--card); }
-  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-  .brand { font-weight: 700; font-size: 1.05rem; }
-  .btn {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 12px 22px;
-    border-radius: 10px;
-  }
-  .btn:hover, .btn:focus-visible { background: var(--accent-dark); }
-  .btn.alt { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: 10px 20px; }
-  .btn.alt:hover, .btn.alt:focus-visible { background: #eef2ff; }
-  .eyebrow { display: inline-block; font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
-  .hero { padding: 64px 0 48px; }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.15; margin: 0 0 16px; }
-  .hero p.lead { font-size: 1.2rem; color: var(--muted); max-width: 680px; margin: 0 0 28px; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  section { padding: 44px 0; }
-  section h2 { font-size: 1.7rem; margin: 0 0 8px; }
-  section p.sub { color: var(--muted); margin: 0 0 26px; max-width: 680px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
-  .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
-  .card p { margin: 0; color: var(--muted); }
-  .num { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; margin-bottom: 10px; }
-  .price { text-align: center; padding: 32px 22px; }
-  .price .amt { font-size: 3rem; font-weight: 800; line-height: 1; }
-  .price .per { color: var(--muted); margin: 6px 0 16px; }
-  .price ul { list-style: none; padding: 0; margin: 0 0 20px; text-align: left; display: inline-block; }
-  .price li { padding: 4px 0 4px 26px; position: relative; }
-  .price li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
-  .notfor { border-left: 4px solid var(--accent); }
-  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
-  summary { cursor: pointer; font-weight: 600; }
-  details p { margin: 10px 0 0; color: var(--muted); }
-  .contact { background: var(--ink); color: #fff; border-radius: 18px; padding: 40px 24px; text-align: center; }
-  .contact h2 { margin-bottom: 8px; }
-  .contact p { color: #cfd3dc; margin: 0 0 22px; }
-  .contact .btn { background: #fff; color: var(--ink); }
-  .contact .btn:hover { background: #e8ebf5; }
-  .contact .btn.alt { background: transparent; color: #fff; border-color: #fff; }
-  .contact .btn.alt:hover { background: rgba(255,255,255,.12); }
-  footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; text-align: center; }
-  :focus-visible { outline: 3px solid #ffbf47; outline-offset: 2px; }
-  .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: var(--ink); padding: 8px 14px; border-radius: 8px; z-index: 10; }
-  .skip:focus { left: 8px; }
-  .callbar { display: none; }
-  @media (max-width: 640px) {
-    .callbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; gap: 8px; padding: 10px; background: var(--card); border-top: 1px solid var(--line); z-index: 5; }
-    .callbar a { flex: 1; text-align: center; }
-    body { padding-bottom: 72px; }
-    header.top .btn { display: none; }
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #12141a; --card: #1b1f27; --ink: #eef0f5; --muted: #a6adbb; --accent: #6b97ff; --accent-dark: #8aaeff; --line: #2b303b; }
-    .btn { color: #0b1020; }
-    .btn.alt { color: var(--accent); }
-    .btn.alt:hover, .btn.alt:focus-visible { background: #1f2a45; }
-    .contact { background: #1b1f27; border: 1px solid var(--line); }
-    .contact .btn { background: #eef0f5; color: #12141a; }
-    .num { color: #0b1020; }
-  }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+:root{--paper:#f3f0e8;--ink:#292c27;--muted:#64665c;--line:#d1d0c4;--accent:#7a3828;--panel:#e8e6db}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Segoe UI",Arial,sans-serif}a{color:inherit;text-underline-offset:5px}a,button{transition:background .2s,color .2s,transform .2s}a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:6px}.wrap{width:min(1200px,calc(100% - 96px));margin:auto}.top{padding:28px 0}.top .wrap{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:24px}.brand{text-decoration:none;display:flex;align-items:center;gap:14px}.monogram{border:1px solid var(--ink);width:42px;height:42px;display:grid;place-items:center;font:italic 24px Georgia,serif}.brand strong{display:block;font-size:15px;font-weight:600;line-height:1.3}.brand small{display:block;font-size:11px;letter-spacing:.1em;color:var(--muted)}.top nav{display:flex;gap:32px;font-size:13px}.top nav a{text-decoration:none}.top nav a:hover{color:var(--accent)}.hero{padding:62px 0 64px;display:grid;grid-template-columns:1.65fr 1fr;gap:80px;align-items:end}.eyebrow,.label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}.eyebrow{display:flex;gap:12px;align-items:center;margin:0 0 30px}.eyebrow:before{content:"";width:7px;height:7px;background:var(--accent);border-radius:50%}h1,h2,h3,p{margin-top:0}h1{font:normal clamp(52px,6.4vw,86px)/1.03 Georgia,"Times New Roman",serif;letter-spacing:-.055em;margin-bottom:30px;max-width:760px}h1 em{color:var(--accent);font-weight:normal}h2{font:normal clamp(34px,3.8vw,48px)/1.12 Georgia,serif;letter-spacing:-.035em}h3{font-size:19px;font-weight:500;line-height:1.4}.lead{max-width:480px;color:var(--muted);font-size:17px;line-height:1.8;margin-bottom:30px}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;padding:14px 20px;background:var(--accent);color:var(--paper);text-decoration:none;font-size:14px;font-weight:600}.button:hover{background:#5d2b20}.button:active{transform:translateY(1px)}.quiet{font-size:12px;color:var(--muted);margin:13px 0 0}.session{background:var(--panel);padding:30px 32px 26px;border-top:3px solid var(--accent);position:relative}.session .label{color:var(--accent)}.session-number{font:normal 76px/1 Georgia,serif;letter-spacing:-.055em;margin:32px 0 6px}.session-number span{font:13px "Segoe UI",sans-serif;letter-spacing:0;margin-left:10px}.session dl{margin:25px 0 22px}.session dl div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid #c9c9ba;padding:12px 0;font-size:12px}.session dt{color:var(--muted)}.session dd{margin:0;text-align:right}.session .signature{font:italic 27px Georgia,serif;margin:25px 0 0}.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:18px 0;font-size:12px;color:var(--muted)}.strip strong{color:var(--ink);font-weight:500}.section{padding:88px 0;border-bottom:1px solid var(--line)}.section-intro{display:grid;grid-template-columns:1fr 1.5fr;gap:80px;margin-bottom:34px}.section-intro .label{color:var(--accent)}.section-intro p{max-width:560px;color:var(--muted);margin-bottom:0}.topics{margin-left:calc(40% + 16px)}.topic{display:grid;grid-template-columns:35px 1fr 1.2fr;gap:22px;padding:25px 0;border-top:1px solid var(--line);align-items:start}.topic .index{font:12px/2 monospace;color:var(--accent)}.topic h3{margin:0}.topic p{margin:0;font-size:14px;color:var(--muted)}.process{display:grid;grid-template-columns:1fr 1.5fr;gap:80px}.process .label{color:var(--accent);display:block;margin-bottom:22px}.steps{list-style:none;margin:0;padding:0;counter-reset:steps}.steps li{counter-increment:steps;display:grid;grid-template-columns:35px 1fr;gap:20px;padding:21px 0;border-top:1px solid var(--line)}.steps li:before{content:"0" counter(steps);font:12px/2 monospace;color:var(--accent)}.steps h3{margin-bottom:5px}.steps p{font-size:14px;color:var(--muted);margin:0}.questions{display:grid;grid-template-columns:1fr 1.5fr;gap:80px}.answers article{padding:22px 0;border-top:1px solid var(--line)}.answers h3{font-size:16px;margin-bottom:8px}.answers p{font-size:14px;color:var(--muted);margin:0}.booking{padding:80px 0;display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:end}.booking h2{font-size:clamp(42px,5vw,64px);max-width:580px;margin-bottom:20px}.booking p{color:var(--muted);max-width:440px}.booking .phone{font:normal clamp(24px,3vw,36px) Georgia,serif;display:block;text-decoration:none;letter-spacing:-.03em;margin:22px 0 12px}.booking .label{color:var(--accent)}footer .wrap{padding:24px 0 32px;border-top:1px solid var(--ink);display:flex;justify-content:space-between;gap:24px;color:var(--muted);font-size:11px}.skip{position:absolute;left:-9999px;top:10px;background:var(--paper);padding:10px;z-index:3}.skip:focus{left:10px}.callbar{display:none}@media(min-width:1450px){.hero{padding-top:90px;padding-bottom:85px}}@media(max-width:900px){.wrap{width:calc(100% - 48px)}.hero{gap:36px;grid-template-columns:1.4fr 1fr}h1{font-size:60px}.session{padding:24px}.section-intro,.process,.questions,.booking{gap:36px;grid-template-columns:1fr 1.4fr}.topics{margin-left:0}.topic{grid-template-columns:35px 1fr 1.2fr}}@media(max-width:640px){body{padding-bottom:65px}.wrap{width:calc(100% - 40px)}.top{padding:20px 0}.top .wrap{padding-bottom:18px}.top nav{gap:18px;font-size:12px}.top nav a:first-child{display:none}.top nav a{white-space:nowrap}.top nav a:nth-child(2){display:none}.brand small{font-size:9px}.brand strong{font-size:13px}.monogram{width:36px;height:36px}.hero{padding:35px 0 38px;grid-template-columns:1fr;gap:35px}.eyebrow{margin-bottom:25px;font-size:10px}h1{font-size:58px;max-width:450px}.lead{font-size:16px}.session{padding:24px}.session-number{margin-top:22px;font-size:64px}.strip{flex-wrap:wrap;gap:8px 18px;font-size:11px}.strip span:last-child{width:100%}.section{padding:52px 0}.section-intro,.process,.questions,.booking{grid-template-columns:1fr;gap:22px}.section-intro{margin-bottom:28px}.section-intro h2{margin-bottom:0}.topic{grid-template-columns:26px 1fr;gap:6px 13px;padding:22px 0}.topic p{grid-column:2}.topic h3{font-size:18px}.booking{padding:52px 0}.booking h2{font-size:46px}footer .wrap{display:block}footer span{display:block;margin-bottom:6px}.callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:2;background:var(--paper);border-top:1px solid var(--line);padding:10px 20px;align-items:center;justify-content:space-between;gap:20px}.callbar>a:first-child{font-size:13px;text-decoration:none}.callbar .button{padding:9px 16px;font-size:12px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}a,button{transition:none}}
 </style>
 </head>
 <body>
-<a class="skip" href="#learn">Skip to content</a>
-
-<header class="top">
-  <div class="wrap">
-    <div class="brand">Eli Kenny &middot; AI Training for Consultants</div>
-    <a class="btn" href="tel:+17205077846">Call or text (720) 507-7846</a>
-  </div>
-</header>
-
-<main>
-  <div class="wrap">
-
-    <div class="hero">
-      <span class="eyebrow">For AI consultants only</span>
-      <h1>Deliver better AI work for your clients.</h1>
-      <p class="lead">Private one-on-one training for people who consult on AI. We work on your real client projects: workflows, prompts, proposals and the judgment calls that make your work reliable. Online over Zoom, or in person around Denver.</p>
-      <div class="cta-row">
-        <a class="btn" href="sms:+17205077846?&body=Hi%2C%20I%27m%20an%20AI%20consultant%20and%20I%27d%20like%20to%20book%20a%20session.">Text to book</a>
-        <a class="btn alt" href="tel:+17205077846">Call (720) 507-7846</a>
-      </div>
-    </div>
-
-    <section id="learn">
-      <h2>What we work on</h2>
-      <p class="sub">You bring a real engagement, or one you are about to pitch. We sharpen it together, with sample or redacted material in place of anything confidential.</p>
-      <div class="grid">
-        <div class="card"><h3>Client workflows</h3><p>Turn a client's repeated task into a dependable AI-assisted workflow, with clear steps, hand-offs and a human check.</p></div>
-        <div class="card"><h3>Prompting and testing</h3><p>Write prompts that hold up, build a small set of test cases, and catch bad outputs before a client sees them.</p></div>
-        <div class="card"><h3>Scoping and proposals</h3><p>Ask better discovery questions, size an AI project honestly, and set expectations about what AI can and cannot do.</p></div>
-        <div class="card"><h3>Choosing the tools</h3><p>Compare Claude, ChatGPT and other options on quality, cost, privacy and fit for a given client.</p></div>
-        <div class="card"><h3>Risk and trust</h3><p>Client data, hallucinations, disclosure and review. How to explain the limits and keep a client's confidence.</p></div>
-        <div class="card"><h3>Your own practice</h3><p>Position your offer, build a demo that shows value fast, and package your deliverables.</p></div>
-      </div>
-    </section>
-
-    <section id="who">
-      <h2>Who this is for</h2>
-      <div class="card notfor">
-        <p><strong>AI consultants only.</strong> Independent consultants, consultants at small firms, and people about to start consulting on AI. This is not general AI lessons for personal use.</p>
-      </div>
-    </section>
-
-    <section id="how">
-      <h2>How it works</h2>
-      <p class="sub">Simple, and you only pay when the session is done.</p>
-      <div class="grid">
-        <div class="card"><div class="num">1</div><h3>Reach out</h3><p>Call or text (720) 507-7846 with the engagement or skill you want to work on.</p></div>
-        <div class="card"><div class="num">2</div><h3>Pick a time</h3><p>Appointments are available throughout the week, over Zoom or in person.</p></div>
-        <div class="card"><div class="num">3</div><h3>Work on the real thing</h3><p>A 60-minute session on your own project, at your pace.</p></div>
-        <div class="card"><div class="num">4</div><h3>Pay afterward</h3><p>Payment is due after the session is complete.</p></div>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <h2>Pricing</h2>
-      <div class="card price">
-        <div class="amt">$50</div>
-        <div class="per">per 60-minute session</div>
-        <ul>
-          <li>One-on-one, just you and me</li>
-          <li>Over Zoom from anywhere, or in person around Denver</li>
-          <li>Pay after the session is complete</li>
-          <li>Free 15-minute intro chat first</li>
-        </ul>
-        <div><a class="btn" href="sms:+17205077846?&body=Hi%2C%20I%27m%20an%20AI%20consultant%20and%20I%27d%20like%20to%20book%20a%20session.">Text to book</a></div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <h2>Questions</h2>
-      <details><summary>Do you do the consulting work for me?</summary><p>No. Sessions are training and working practice on your own methods and deliverables. You keep the client relationship and the work.</p></details>
-      <details><summary>Can I share a client's confidential data?</summary><p>Please don't. Use sample or redacted material so we can work on the structure and the thinking without exposing anything private.</p></details>
-      <details><summary>Is this a certification?</summary><p>No. It is private, practical training. There is no exam or credential.</p></details>
-      <details><summary>Where do the sessions happen?</summary><p>Online over Zoom from anywhere, or in person at a public place around the Denver area that works for both of us.</p></details>
-      <details><summary>When do I pay?</summary><p>After the session is complete. Nothing up front.</p></details>
-      <details><summary>Can I book more than one session?</summary><p>Yes. You can book a single session or a few over the week. Just ask when you reach out.</p></details>
-    </section>
-
-    <section>
-      <div class="contact">
-        <h2>Ready to sharpen your practice?</h2>
-        <p>Call or text and tell me what you are working on.</p>
-        <div class="cta-row" style="justify-content:center">
-          <a class="btn" href="sms:+17205077846?&body=Hi%2C%20I%27m%20an%20AI%20consultant%20and%20I%27d%20like%20to%20book%20a%20session.">Text (720) 507-7846</a>
-          <a class="btn alt" href="tel:+17205077846">Call</a>
-        </div>
-      </div>
-    </section>
-
-  </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="#main" aria-label="Eli Kenny AI Training home"><span class="monogram" aria-hidden="true">ek</span><span><strong>Eli Kenny</strong><small>AI TRAINING · DENVER &amp; ONLINE</small></span></a><nav aria-label="Main navigation"><a href="#learn">The work</a><a href="#how">The session</a><a href="#book">Get in touch ↗</a></nav></div></header>
+<main id="main" class="wrap">
+<section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow">Independent training for AI consultants</p><h1 id="hero-title">Better thinking.<br>Better <em>client work.</em></h1><p class="lead">Bring the workflow, prompt or proposal you’re working on. We’ll spend an hour making it clearer, testing the weak spots, and working through what comes next.</p><a class="button" href="sms:+17205077846?body=Hi%2C%20I%27d%20like%20a%20free%20intro%20chat%20about%20AI%20consultant%20training.">Let’s talk about your project <span aria-hidden="true">↗</span></a><p class="quiet">Start with a free 15-minute conversation.</p></div><aside class="session" aria-label="Session details"><span class="label">The working session / 01</span><div class="session-number">$50<span>/ 60 minutes</span></div><p>One project. One conversation.<br>Your work, with a second pair of eyes.</p><dl><div><dt>Format</dt><dd>One-on-one with Eli</dd></div><div><dt>Where</dt><dd>Denver or Zoom</dd></div><div><dt>Payment</dt><dd>After the session</dd></div></dl><p class="signature">Bring something worth working on.</p></aside></section>
+<div class="strip"><span><strong>For independent &amp; small-firm AI consultants</strong></span><span>Practical training. Your real projects.</span><span>Denver, Colorado · Available remotely</span></div>
+<section id="learn" class="section"><div class="section-intro"><div><p class="label">01 / The work</p><h2>A useful hour starts<br>with a real problem.</h2></div><p>Choose the part of your practice that needs attention. Bring an active engagement, an upcoming pitch, or an idea you want to test. Use sample or redacted material for anything confidential.</p></div><div class="topics">
+<article class="topic"><span class="index">01</span><h3>Client workflows</h3><p>Turn a repeated task into a clear AI-assisted process, with hand-offs and human checks.</p></article>
+<article class="topic"><span class="index">02</span><h3>Prompts &amp; testing</h3><p>Build test cases. Compare outputs. Find the failures before they reach your client.</p></article>
+<article class="topic"><span class="index">03</span><h3>Scopes &amp; proposals</h3><p>Ask better discovery questions and define what you can realistically deliver.</p></article>
+<article class="topic"><span class="index">04</span><h3>Tools &amp; judgment</h3><p>Weigh quality, cost and privacy. Decide where AI belongs and where a person should review.</p></article>
+<article class="topic"><span class="index">05</span><h3>Your consulting offer</h3><p>Shape a focused service, a useful demo, or a deliverable your client can understand.</p></article>
+</div></section>
+<section id="how" class="section process"><div><span class="label">02 / The session</span><h2>No course to finish.<br>Just work to move forward.</h2><p class="lead">For people consulting on AI, or preparing to start. You keep the client relationship and do the work. I help you think it through.</p></div><ol class="steps"><li><div><h3>Tell me what you’re working on.</h3><p>Call or text with your project and the question you want to untangle. The first 15-minute chat is free.</p></div></li><li><div><h3>Find a time and bring your material.</h3><p>Meet over Zoom or in person in the Denver area, including at your home or an agreed public place.</p></div></li><li><div><h3>Work together for 60 minutes.</h3><p>Focus on your project, test your approach, and identify your next steps. Pay $50 when the session is complete.</p></div></li></ol></section>
+<section id="faq" class="section questions"><div><p class="label">03 / A few things to know</p><h2>Before we meet.</h2></div><div class="answers"><article><h3>Training, rather than outsourced consulting.</h3><p>We work on your methods and deliverables together. I don’t take over your client engagement. This isn’t a certification or a credential.</p></article><article><h3>Keep client information private.</h3><p>Bring sample or redacted material. We can work on the structure and thinking without sharing confidential data.</p></article><article><h3>One session is fine.</h3><p>There’s no package to buy and nothing due up front. Book another session if you want to keep working.</p></article><article><h3>Remote or local.</h3><p>Zoom sessions are available from anywhere. In-person sessions cover Denver and surrounding communities, including Aurora, Lakewood, Arvada, Westminster, Thornton, Centennial, Littleton, Englewood and Golden.</p></article></div></section>
+<section id="book" class="booking"><div><p class="label">Your next working session</p><h2>What are you<br>trying to figure out?</h2><p>Tell me a little about your project. We’ll start with a free 15-minute chat and see whether a session makes sense.</p></div><div><a class="button" href="sms:+17205077846?body=Hi%2C%20I%27m%20an%20AI%20consultant%20and%20I%27d%20like%20to%20discuss%20a%20session.">Text Eli to get started <span aria-hidden="true">↗</span></a><a class="phone" href="tel:+17205077846">(720) 507-7846</a><p class="quiet">Calls welcome, too. $50 / hour. Pay afterward.</p></div></section>
 </main>
-
-<footer>
-  <div class="wrap">Eli Kenny &middot; One-on-one AI training for AI consultants &middot; Denver, Colorado &middot; (720) 507-7846</div>
-</footer>
-
-<nav class="callbar" aria-label="Contact">
-  <a class="btn" href="tel:+17205077846">Call</a>
-  <a class="btn alt" href="sms:+17205077846?&body=Hi%2C%20I%27m%20an%20AI%20consultant%20and%20I%27d%20like%20to%20book%20a%20session.">Text</a>
-</nav>
-
+<footer><div class="wrap"><span>Eli Kenny · Independent AI training</span><span>Denver, Colorado &amp; online</span><a href="#main">Back to top ↑</a></div></footer>
+<nav class="callbar" aria-label="Quick contact"><a href="tel:+17205077846">Call Eli ↗</a><a class="button" href="sms:+17205077846?body=Hi%2C%20I%27d%20like%20to%20book%20an%20AI%20training%20session.">Text to book ↗</a></nav>
 </body>
 </html>
