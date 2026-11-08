@@ -20,131 +20,215 @@
 </head>
 <body>
 
+<!-- ============================================================
+     LIVING BACKGROUND LAYER — sits behind everything
+     ============================================================ -->
+<div class="living-bg" aria-hidden="true">
+  <!-- Deep cellular field -->
+  <canvas class="living-bg__cells" id="cells-canvas"></canvas>
+  <!-- Bioluminescent filaments -->
+  <canvas class="living-bg__filaments" id="filaments-canvas"></canvas>
+  <!-- Floating spores/particles -->
+  <canvas class="living-bg__spores" id="spores-canvas"></canvas>
+  <!-- Ambient glow orbs -->
+  <div class="living-bg__orbs">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+</div>
+
+<!-- Cursor-following magnetic field -->
+<div class="cursor-field" aria-hidden="true">
+  <div class="cursor-core"></div>
+  <div class="cursor-ring"></div>
+  <div class="cursor-trail"></div>
+</div>
+
 <header class="header" role="banner">
   <div class="wrap header__in">
     <a class="brand" href="#top" aria-label="Impeccable Intelligence Consulting — home">
       <img class="logo" src="assets/iic-logo-horizontal-light.svg" alt="Impeccable Intelligence Consulting">
+      <span class="brand__pulse" aria-hidden="true"></span>
     </a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="#approach">Approach</a>
-      <a href="#focus">Focus Areas</a>
-      <a href="#session">The Session</a>
-      <a href="#book" class="nav-cta">Book</a>
+      <a href="#approach" data-nav="approach">Approach</a>
+      <a href="#focus" data-nav="focus">Focus Areas</a>
+      <a href="#session" data-nav="session">The Session</a>
+      <a href="#book" class="nav-cta" data-nav="book">Book</a>
     </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
   </div>
   <div class="header__glow" aria-hidden="true"></div>
+  <div class="header__scanline" aria-hidden="true"></div>
 </header>
 
 <main id="top">
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO — Living Organism ============ -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__bg" aria-hidden="true">
-      <svg class="hero__blob" viewBox="0 0 640 640" preserveAspectRatio="none">
-        <use href="assets/biomorph-hero.svg#bio-colony"></use>
-      </svg>
-      <div class="hero__grid-overlay" aria-hidden="true"></div>
+    <div class="hero__atmosphere" aria-hidden="true">
+      <!-- Hero-specific living layer -->
+      <canvas class="hero__canvas" id="hero-canvas"></canvas>
+      <!-- Central colony organism -->
+      <div class="hero__colony" id="hero-colony">
+        <svg class="hero__colony-svg" viewBox="0 0 640 640" preserveAspectRatio="none">
+          <use href="assets/biomorph-hero.svg#bio-colony"></use>
+        </svg>
+        <div class="hero__colony-glow"></div>
+        <div class="hero__colony-ring"></div>
+        <div class="hero__colony-ring hero__colony-ring--2"></div>
+      </div>
+      <!-- Phyllotaxis spiral field -->
+      <div class="hero__spiral-field" id="hero-spiral"></div>
+      <!-- Floating data motes -->
+      <div class="hero__motes" id="hero-motes"></div>
     </div>
 
     <div class="wrap hero__content">
       <div class="hero__text">
-        <p class="eyebrow" data-reveal>AI Training for Consultants</p>
-        <h1 id="hero-title" class="display" data-reveal>Private AI training<br>for working consultants</h1>
-        <p class="lead" data-reveal>Five focus areas. One live problem per session. You leave with a written plan, not a vague feeling. $50 flat, pay after. Free 15-minute intro chat.</p>
-        <div class="actions" data-reveal>
-          <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
-          <a class="btn btn--ghost" href="tel:+17205077846">Or call (720) 507-7846</a>
+        <p class="eyebrow" data-reveal data-reveal-delay="0">AI Training for Consultants</p>
+        <h1 id="hero-title" class="display" data-reveal data-reveal-delay="120" data-split-text>Private AI training<br>for working consultants</h1>
+        <p class="lead" data-reveal data-reveal-delay="240">Five focus areas. One live problem per session. You leave with a written plan, not a vague feeling. $50 flat, pay after. Free 15-minute intro chat.</p>
+        <div class="actions" data-reveal data-reveal-delay="360">
+          <a class="btn btn--primary btn--magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">
+            <span class="btn__text">Request a session</span>
+            <span class="btn__ripple" aria-hidden="true"></span>
+            <span class="btn__particles" aria-hidden="true"></span>
+          </a>
+          <a class="btn btn--ghost btn--magnetic" href="tel:+17205077846">
+            <span class="btn__text">Or call (720) 507-7846</span>
+            <span class="btn__underline" aria-hidden="true"></span>
+          </a>
         </div>
-        <ul class="hero__badges" data-reveal>
+        <ul class="hero__badges" data-reveal data-reveal-delay="480">
           <li><span class="badge__dot" aria-hidden="true"></span>Denver-area home visits</li>
           <li><span class="badge__dot" aria-hidden="true"></span>Google Meet worldwide</li>
           <li><span class="badge__dot" aria-hidden="true"></span>Venmo / Zelle after</li>
         </ul>
+        <!-- Scroll indicator -->
+        <div class="hero__scroll" data-reveal data-reveal-delay="600" aria-hidden="true">
+          <span class="hero__scroll-text">Scroll</span>
+          <svg class="hero__scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M12 19l-5-5M12 19l5-5"/></svg>
+        </div>
       </div>
 
-      <figure class="hero__visual" data-reveal>
-        <img src="assets/biomorph-hero.svg" alt="Biomorphic cellular composition — an abstract colony of organic membranes threaded by filaments over a golden-angle point field">
-        <figcaption class="visually-hidden">Biomorphic cellular composition representing adaptive intelligence</figcaption>
+      <figure class="hero__visual" data-reveal data-reveal-delay="180">
+        <div class="hero__visual-frame">
+          <img src="assets/hero-session.png" alt="A consultant and client working together at a table with a laptop">
+          <div class="hero__visual-aura" aria-hidden="true"></div>
+          <div class="hero__visual-scan" aria-hidden="true"></div>
+        </div>
+        <figcaption class="visually-hidden">Private AI training session in Denver</figcaption>
+        <div class="hero__visual-meta">
+          <span class="meta-pill"><span class="meta-pill__dot"></span>Live session</span>
+          <span class="meta-pill"><span class="meta-pill__dot"></span>60 minutes</span>
+          <span class="meta-pill"><span class="meta-pill__dot"></span>Written plan</span>
+        </div>
       </figure>
     </div>
 
-    <div class="hero__footer" data-reveal>
+    <div class="hero__footer" data-reveal data-reveal-delay="300">
       <div class="wrap hero__stats">
         <div class="stat">
-          <span class="stat__value">5</span>
+          <span class="stat__value" data-count="5">0</span>
           <span class="stat__label">Focus areas</span>
+          <div class="stat__bar"><div class="stat__bar-fill" style="--fill: 1"></div></div>
         </div>
         <div class="stat">
-          <span class="stat__value">60</span>
+          <span class="stat__value" data-count="60">0</span>
           <span class="stat__label">Minutes per session</span>
+          <div class="stat__bar"><div class="stat__bar-fill" style="--fill: 1"></div></div>
         </div>
         <div class="stat">
-          <span class="stat__value">$50</span>
-          <span class="stat__label">Flat rate</span>
+          <span class="stat__value" data-count="50">0</span>
+          <span class="stat__label">Flat rate $</span>
+          <div class="stat__bar"><div class="stat__bar-fill" style="--fill: 1"></div></div>
         </div>
         <div class="stat">
-          <span class="stat__value">0</span>
+          <span class="stat__value" data-count="0">0</span>
           <span class="stat__label">Retainers</span>
+          <div class="stat__bar"><div class="stat__bar-fill" style="--fill: 0"></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ APPROACH ============ -->
+  <!-- ============ APPROACH — Adaptive Process ============ -->
   <section id="approach" class="section" aria-labelledby="approach-title">
-    <div class="section__bg" aria-hidden="true">
-      <img src="assets/biomorph-cells.svg" alt="" class="section__pattern">
-      <div class="section__gradient" aria-hidden="true"></div>
+    <div class="section__atmosphere" aria-hidden="true">
+      <canvas class="section__canvas" id="approach-canvas"></canvas>
+      <div class="section__filaments-container" id="approach-filaments"></div>
     </div>
 
     <div class="wrap">
       <header class="section__head" data-reveal>
         <p class="eyebrow">01 — How it works</p>
-        <h2 id="approach-title" class="h2">Adaptive process,<br>not a script</h2>
+        <h2 id="approach-title" class="h2" data-split-text>Adaptive process,<br>not a script</h2>
+        <p class="section__lead" data-reveal data-reveal-delay="100">Every consultant's practice is different. The process morphs to your workflow, not the other way around.</p>
       </header>
 
       <div class="approach__grid">
-        <article class="approach__card" data-reveal>
+        <article class="approach__card" data-reveal data-reveal-index="0">
+          <div class="card__aura" aria-hidden="true"></div>
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 38c-9.94 0-18-8.06-18-18S14.06 6 24 6s18 8.06 18 18-8.06 18-18 18z" stroke="currentColor" stroke-width="1.5"/><path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="card__icon-pulse"></div>
           </div>
           <h3 class="card__title">Diagnose first</h3>
           <p class="card__body">We start with your actual client work — not a curriculum. One live problem defines the session scope.</p>
+          <div class="card__connector" aria-hidden="true"></div>
         </article>
 
-        <article class="approach__card" data-reveal>
+        <article class="approach__card" data-reveal data-reveal-index="1">
+          <div class="card__aura" aria-hidden="true"></div>
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 38c-9.94 0-18-8.06-18-18S14.06 6 24 6s18 8.06 18 18-8.06 18-18 18z" stroke="currentColor" stroke-width="1.5"/><path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <div class="card__icon-pulse"></div>
           </div>
           <h3 class="card__title">Work it live</h3>
           <p class="card__body">We build, test, and refine together in real time. Prompts, workflows, tool configs — whatever the problem demands.</p>
+          <div class="card__connector" aria-hidden="true"></div>
         </article>
 
-        <article class="approach__card" data-reveal>
+        <article class="approach__card" data-reveal data-reveal-index="2">
+          <div class="card__aura" aria-hidden="true"></div>
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 38c-9.94 0-18-8.06-18-18S14.06 6 24 6s18 8.06 18 18-8.06 18-18 18z" stroke="currentColor" stroke-width="1.5"/><path d="M14 24l6 6 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="card__icon-pulse"></div>
           </div>
           <h3 class="card__title">Leave with a plan</h3>
           <p class="card__body">Written next steps, not a vague feeling. Specific prompts, workflow updates, tool configs, and a check-in cadence.</p>
+          <div class="card__connector" aria-hidden="true"></div>
         </article>
       </div>
+
+      <!-- Connecting filament between cards -->
+      <div class="approach__filament" aria-hidden="true" id="approach-filament-main"></div>
     </div>
   </section>
 
-  <!-- ============ FOCUS AREAS ============ -->
+  <!-- ============ FOCUS AREAS — Living Categories ============ -->
   <section id="focus" class="section section--alt" aria-labelledby="focus-title">
-    <div class="section__bg" aria-hidden="true">
-      <div class="section__filaments" aria-hidden="true"></div>
+    <div class="section__atmosphere" aria-hidden="true">
+      <canvas class="section__canvas" id="focus-canvas"></canvas>
+      <div class="section__mycelium" id="focus-mycelium"></div>
     </div>
 
     <div class="wrap">
       <header class="section__head" data-reveal>
         <p class="eyebrow">02 — What we cover</p>
-        <h2 id="focus-title" class="h2">Five areas where<br>consultants get stuck</h2>
+        <h2 id="focus-title" class="h2" data-split-text>Five areas where<br>consultants get stuck</h2>
+        <p class="section__lead" data-reveal data-reveal-delay="100">These aren't topics. They're the friction points where AI meets real client delivery.</p>
       </header>
 
       <div class="focus__grid">
-        <article class="focus__item" data-reveal>
+        <article class="focus__item" data-reveal data-reveal-index="0" data-focus="workflows">
+          <div class="focus__aura" aria-hidden="true"></div>
           <div class="focus__num">01</div>
           <div class="focus__content">
             <h3 class="focus__title">Client Workflows</h3>
@@ -155,9 +239,11 @@
               <li>Version control for prompts</li>
             </ul>
           </div>
+          <div class="focus__growth" aria-hidden="true"></div>
         </article>
 
-        <article class="focus__item" data-reveal>
+        <article class="focus__item" data-reveal data-reveal-index="1" data-focus="prompting">
+          <div class="focus__aura" aria-hidden="true"></div>
           <div class="focus__num">02</div>
           <div class="focus__content">
             <h3 class="focus__title">Prompting & Testing</h3>
@@ -168,9 +254,11 @@
               <li>Regression testing</li>
             </ul>
           </div>
+          <div class="focus__growth" aria-hidden="true"></div>
         </article>
 
-        <article class="focus__item" data-reveal>
+        <article class="focus__item" data-reveal data-reveal-index="2" data-focus="scoping">
+          <div class="focus__aura" aria-hidden="true"></div>
           <div class="focus__num">03</div>
           <div class="focus__content">
             <h3 class="focus__title">Project Scoping</h3>
@@ -181,9 +269,11 @@
               <li>Pricing models</li>
             </ul>
           </div>
+          <div class="focus__growth" aria-hidden="true"></div>
         </article>
 
-        <article class="focus__item" data-reveal>
+        <article class="focus__item" data-reveal data-reveal-index="3" data-focus="tools">
+          <div class="focus__aura" aria-hidden="true"></div>
           <div class="focus__num">04</div>
           <div class="focus__content">
             <h3 class="focus__title">Tool Selection</h3>
@@ -194,9 +284,11 @@
               <li>Integration patterns</li>
             </ul>
           </div>
+          <div class="focus__growth" aria-hidden="true"></div>
         </article>
 
-        <article class="focus__item" data-reveal>
+        <article class="focus__item" data-reveal data-reveal-index="4" data-focus="data">
+          <div class="focus__aura" aria-hidden="true"></div>
           <div class="focus__num">05</div>
           <div class="focus__content">
             <h3 class="focus__title">Responsible Data Handling</h3>
@@ -207,29 +299,34 @@
               <li>Retention & deletion</li>
             </ul>
           </div>
+          <div class="focus__growth" aria-hidden="true"></div>
         </article>
       </div>
+
+      <!-- Mycelium network connecting all items -->
+      <svg class="focus__network" aria-hidden="true" id="focus-network"></svg>
     </div>
   </section>
 
-  <!-- ============ THE SESSION ============ -->
+  <!-- ============ THE SESSION — Living Timeline ============ -->
   <section id="session" class="section" aria-labelledby="session-title">
-    <div class="section__bg" aria-hidden="true">
-      <div class="section__orb" aria-hidden="true"></div>
-      <div class="section__orb section__orb--2" aria-hidden="true"></div>
+    <div class="section__atmosphere" aria-hidden="true">
+      <canvas class="section__canvas" id="session-canvas"></canvas>
+      <div class="session__dna-strand" aria-hidden="true" id="session-dna"></div>
     </div>
 
     <div class="wrap">
       <header class="section__head" data-reveal>
         <p class="eyebrow">03 — The Session</p>
-        <h2 id="session-title" class="h2">One hour.<br>One project.<br>Zero fluff.</h2>
+        <h2 id="session-title" class="h2" data-split-text>One hour.<br>One project.<br>Zero fluff.</h2>
       </header>
 
       <div class="session__layout">
         <div class="session__visual" data-reveal>
           <figure class="session__frame">
             <img src="assets/session-wide.png" alt="A consultant and client working together at a table with a laptop">
-            <div class="session__overlay" aria-hidden="true"></div>
+            <div class="session__frame-aura" aria-hidden="true"></div>
+            <div class="session__frame-overlay" aria-hidden="true"></div>
           </figure>
           <div class="session__meta">
             <div class="meta__item">
@@ -248,39 +345,70 @@
         </div>
 
         <div class="session__details" data-reveal>
-          <ol class="session__steps">
-            <li class="step">
-              <span class="step__num">01</span>
-              <div class="step__content">
-                <h3 class="step__title">Scope & Align</h3>
-                <p>Fifteen minutes to pin down the one problem worth solving. No slide decks — we look at your actual work.</p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="step__num">02</span>
-              <div class="step__content">
-                <h3 class="step__title">Build & Test</h3>
-                <p>Forty-five minutes of live work. Prompts, workflows, tool configs — we iterate until it works on your data.</p>
-              </div>
-            </li>
-            <li class="step">
-              <span class="step__num">03</span>
-              <div class="step__content">
-                <h3 class="step__title">Document & Plan</h3>
-                <p>Written summary with specific next steps, prompt templates, workflow updates, and a 30-day check-in trigger.</p>
-              </div>
-            </li>
-          </ol>
+          <!-- Living timeline -->
+          <div class="session__timeline" id="session-timeline">
+            <div class="timeline__core" aria-hidden="true"></div>
+            <ol class="session__steps">
+              <li class="step" data-step="1">
+                <div class="step__marker" aria-hidden="true">
+                  <span class="step__num">01</span>
+                  <div class="step__pulse"></div>
+                  <div class="step__ring"></div>
+                </div>
+                <div class="step__content">
+                  <h3 class="step__title">Scope & Align</h3>
+                  <p>Fifteen minutes to pin down the one problem worth solving. No slide decks — we look at your actual work.</p>
+                  <div class="step__duration">~15 min</div>
+                </div>
+              </li>
+              <li class="step" data-step="2">
+                <div class="step__marker" aria-hidden="true">
+                  <span class="step__num">02</span>
+                  <div class="step__pulse"></div>
+                  <div class="step__ring"></div>
+                </div>
+                <div class="step__content">
+                  <h3 class="step__title">Build & Test</h3>
+                  <p>Forty-five minutes of live work. Prompts, workflows, tool configs — we iterate until it works on your data.</p>
+                  <div class="step__duration">~45 min</div>
+                </div>
+              </li>
+              <li class="step" data-step="3">
+                <div class="step__marker" aria-hidden="true">
+                  <span class="step__num">03</span>
+                  <div class="step__pulse"></div>
+                  <div class="step__ring"></div>
+                </div>
+                <div class="step__content">
+                  <h3 class="step__title">Document & Plan</h3>
+                  <p>Written summary with specific next steps, prompt templates, workflow updates, and a 30-day check-in trigger.</p>
+                  <div class="step__duration">Delivered after</div>
+                </div>
+              </li>
+            </ol>
+          </div>
 
           <aside class="session__price" aria-label="Pricing">
+            <div class="price__aura" aria-hidden="true"></div>
             <div class="price__amt">$50</div>
             <div class="price__detail">
               <p class="price__unit">Flat rate · 60 minutes</p>
               <p class="price__terms"><strong>Pay after the session.</strong> Venmo or Zelle. No contracts, no retainers, no setup fees. If it wasn't useful, you don't pay.</p>
             </div>
             <div class="price__cta">
-              <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
-              <a class="btn btn--outline" href="tel:+17205077846">Call (720) 507-7846</a>
+              <a class="btn btn--primary btn--magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">
+                <span class="btn__text">Request a session</span>
+                <span class="btn__ripple" aria-hidden="true"></span>
+                <span class="btn__particles" aria-hidden="true"></span>
+              </a>
+              <a class="btn btn--outline btn--magnetic" href="tel:+17205077846">
+                <span class="btn__text">Call (720) 507-7846</span>
+                <span class="btn__ripple" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="price__guarantee" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>Satisfaction guaranteed — or pay nothing</span>
             </div>
           </aside>
         </div>
@@ -288,40 +416,66 @@
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
+  <!-- ============ CTA — Living Invitation ============ -->
   <section id="book" class="section cta-section" aria-labelledby="cta-title">
-    <div class="cta__bg" aria-hidden="true">
-      <svg class="cta__blob" viewBox="0 0 640 640" preserveAspectRatio="none">
-        <use href="assets/biomorph-hero.svg#bio-colony"></use>
-      </svg>
-      <div class="cta__grid" aria-hidden="true"></div>
+    <div class="cta__atmosphere" aria-hidden="true">
+      <canvas class="cta__canvas" id="cta-canvas"></canvas>
+      <div class="cta__colony" id="cta-colony">
+        <svg viewBox="0 0 640 640" preserveAspectRatio="none">
+          <use href="assets/biomorph-hero.svg#bio-colony"></use>
+        </svg>
+      </div>
+      <div class="cta__ripple-ring" aria-hidden="true"></div>
+      <div class="cta__ripple-ring cta__ripple-ring--2" aria-hidden="true"></div>
     </div>
 
     <div class="wrap">
       <div class="cta__content" data-reveal>
-        <h2 id="cta-title" class="h2">Ready to stop guessing<br>with AI?</h2>
-        <p class="cta__lead">Free 15-minute intro chat. Then one session, one live problem, written plan. $50 flat, pay after.</p>
-        <div class="cta__actions">
-          <a class="btn btn--light" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
-          <a class="btn btn--ghost-light" href="tel:+17205077846">(720) 507-7846</a>
+        <div class="cta__badge" data-reveal data-reveal-delay="100">
+          <span class="cta__badge-pulse" aria-hidden="true"></span>
+          <span>Open for new clients</span>
         </div>
+        <h2 id="cta-title" class="h2" data-split-text data-reveal data-reveal-delay="150">Ready to stop guessing<br>with AI?</h2>
+        <p class="cta__lead" data-reveal data-reveal-delay="250">Free 15-minute intro chat. Then one session, one live problem, written plan. $50 flat, pay after.</p>
+        <div class="cta__actions" data-reveal data-reveal-delay="350">
+          <a class="btn btn--light btn--magnetic btn--large" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">
+            <span class="btn__text">Request a session</span>
+            <span class="btn__ripple" aria-hidden="true"></span>
+            <span class="btn__particles" aria-hidden="true"></span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--ghost-light btn--magnetic btn--large" href="tel:+17205077846">
+            <span class="btn__text">(720) 507-7846</span>
+            <span class="btn__ripple" aria-hidden="true"></span>
+          </a>
+        </div>
+        <p class="cta__note" data-reveal data-reveal-delay="450">No retainers. No contracts. Just one session that moves the needle.</p>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
+<!-- ============ FOOTER — Root System ============ -->
 <footer class="footer" role="contentinfo">
-  <div class="footer__bg" aria-hidden="true"></div>
+  <div class="footer__atmosphere" aria-hidden="true">
+    <canvas class="footer__canvas" id="footer-canvas"></canvas>
+    <div class="footer__root-system" id="footer-roots"></div>
+  </div>
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
         <img class="footer__logo" src="assets/iic-logo-horizontal-dark.svg" alt="Impeccable Intelligence Consulting">
+        <div class="footer__logo-aura" aria-hidden="true"></div>
         <p class="footer__tagline">Private AI training for working consultants. Adaptive process, live work, written plans.</p>
         <div class="footer__contact">
           <a href="tel:+17205077846" class="footer__phone">(720) 507-7846</a>
           <span class="footer__location">Denver, Colorado & online</span>
+        </div>
+        <div class="footer__social" aria-label="Social links">
+          <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" class="social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 9.24-3.308.54-8.502-9.24-8.246 9.24-3.308-.54 8.246-9.24-7.227-8.26h3.308l7.227 8.26 7.227-8.26z"/></svg></a>
         </div>
       </div>
 
@@ -368,6 +522,9 @@
     </div>
   </div>
 </footer>
+
+<!-- Scroll progress indicator -->
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__fill"></div></div>
 
 <script src="scripts/main.js"></script>
 </body>
