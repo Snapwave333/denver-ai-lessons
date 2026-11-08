@@ -3,152 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Impeccable Intelligence Consulting | AI Training</title>
-<meta name="description" content="One-on-one AI consultant training: $50/60min, pay after. Denver or Google Meet.">
-<meta property="og:title" content="Impeccable Intelligence Consulting | AI Training">
+<title>IIC | AI Training</title>
+<meta name="description" content="One-on-one AI consultant training: $50/60min. Denver or Google Meet.">
+<meta property="og:title" content="IIC | AI Training">
 <meta property="og:description" content="Make AI understandable. Make it useful.">
 <meta property="og:image" content="assets/social-banner-hero.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snapwave333.github.io/denver-ai-lessons/">
-<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F77F00">
-<link rel="canonical" href="https://snapwave333.github.io/denver-ai-lessons/">
 <link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
-:root{
-  --iic-ivory:#FFFDF9;--iic-ink:#171717;--iic-muted:#64665c;--iic-line:#d1d0c4;--iic-amber:#F77F00;--iic-panel:#f7f5ef
-  --font-sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--font-serif:Georgia,"Times New Roman",serif
-  --size-xs:0.75rem;--size-sm:0.875rem;--size-base:1rem;--size-lg:1.125rem;--size-xl:1.25rem;--size-2xl:1.5rem;--size-3xl:2rem;--size-4xl:2.5rem
-  --space-xs:0.5rem;--space-sm:0.75rem;--space-md:1rem;--space-lg:1.25rem;--space-xl:1.5rem;--space-2xl:2rem;--space-3xl:2.5rem
-  --radius-sm:8px;--radius-md:12px;--radius-lg:16px
-  --shadow-sm:0 1px 2px rgba(0,0,0,0.06);--shadow-md:0 3px 8px rgba(0,0,0,0.08);--shadow-lg:0 6px 16px rgba(0,0,0,0.1)
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{font-size:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--space-2xl) * 2)}
-body{background:var(--iic-ivory);color:var(--iic-ink);font-family:var(--font-sans);font-size:var(--size-base);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none;text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--iic-amber);outline-offset:4px;border-radius:var(--radius-sm)}
-.skip{position:absolute;top:-40px;left:0;background:var(--iic-amber);color:var(--iic-ivory);padding:8px 16px;z-index:100;transition:transform .2s}
-.skip:focus{position:static;transform:translateY(0)}
-.wrap{width:min(1000px,calc(100%-var(--space-lg)*2));margin:auto;padding:0 var(--space-md)}
-.top{position:relative;top:0;z-index:100;background:var(--iic-ivory)/95%;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--iic-line);box-shadow:var(--shadow-sm)}
-.top-inner{display:flex;align-items:center;justify-content:space-between;padding:var(--space-lg) 0}
-.brand{text-decoration:none;display:flex;align-items:center;gap:var(--space-sm)}
-.brand-logo{display:block;width:160px;max-width:100%;height:auto;transition:transform .2s}
-.brand:hover .brand-logo{transform:scale(1.02)}
-.brand-text{font-size:var(--size-sm);line-height:1.2}
-.brand-text strong{display:block;font-size:var(--size-base);font-weight:600}
-.brand-text small{display:block;font-size:var(--size-xs);letter-spacing:.15em;color:var(--iic-muted);text-transform:uppercase}
-.nav-links{display:flex;gap:var(--space-lg);font-size:var(--size-xs)}
-.nav-links a{color:var(--iic-ink);opacity:.7;transition:opacity .15s}
-.nav-links a:hover{opacity:1}
-.nav-links a.active{color:var(--iic-ink);opacity:1;font-weight:600}
-.bento{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-md)}
-.bento-item{background:var(--iic-ivory);padding:var(--space-lg);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:transform .15s,box-shadow .15s}
-.bento-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.bento-item .index{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--iic-amber);color:var(--iic-ivory);font-weight:600;font-size:var(--size-xs);border-radius:50%;margin-bottom:var(--space-sm)}
-.bento-item h3{font-size:var(--size-base);font-weight:500;margin-bottom:var(--space-xs);letter-spacing:-.01em}
-.bento-item p{font-size:var(--size-sm);color:var(--iic-muted);line-height:1.5;margin:0}
-.hero{padding:var(--space-2xl) 0;min-height:60vh;display:grid;grid-template-columns:1.6fr 1fr;gap:var(--space-xl);align-items:center}
-.hero h1{font-family:var(--font-serif);font-weight:normal;font-size:clamp(var(--size-4xl),4.5vw,var(--size-5xl));line-height:1.05;letter-spacing:-.03em;margin-bottom:var(--space-md)}
-.hero h1 em{color:var(--iic-amber);font-weight:normal}
-.lead{color:var(--iic-muted);font-size:var(--size-sm);line-height:1.5;margin-bottom:var(--space-md)}
-.button{display:inline-flex;align-items:center;gap:var(--space-xs);background:var(--iic-amber);color:var(--iic-ivory);font-weight:600;padding:var(--size-xs) var(--space-lg);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm);transition:transform .15s,box-shadow .15s;font-size:var(--size-sm)}
-.button:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
-.button.secondary{background:transparent;color:var(--iic-ink);border:1px solid var(--iic-line);border-radius:var(--radius-sm);transition:background .15s,color .15s}
-.button.secondary:hover{background:var(--iic-panel);color:var(--iic-amber)}
-.quote{font-family:var(--font-serif);font-size:var(--size-lg);line-height:1.15;color:var(--iic-ink);background:var(--iic-panel);padding:var(--space-lg);border-left:3px solid var(--iic-amber);border-radius:var(--radius-md)}
-.session-number{display:inline-block;background:var(--iic-amber);color:var(--iic-ivory);font-weight:600;padding:3px 10px;border-radius:var(--radius-sm);font-size:var(--size-xs)}
-.session-details{font-size:var(--size-xs);color:var(--iic-muted);margin-top:var(--space-md)}
-.session-detail{display:block;margin-bottom:var(--space-xs)}
-.section{padding:var(--space-2xl) 0;border-top:1px solid var(--iic-line)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body,height:100%;background:#FFFDF9;color:#171717;font-family:"Inter",system-ui,sans-serif;font-size:14px;line-height:1.4
+a{color:inherit;text-decoration:none}
+.wrap{max-width:900px;margin:auto;padding:0 4px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid #d1d0c4}
+.logo{font-size:13px;font-weight:600}
+.nav a{font-size:11px;opacity:.5;margin-left:8px;letter-spacing:.3em;text-transform:uppercase}
+.nav a:hover{opacity:1}
+.main{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;padding:8px 0;align-items:center}
+.quote{font-family:"Georgia",serif;font-size:16px;line-height:1.1;background:#f7f5ef;padding:6px 10px;border-left:2px solid #F77F00}
+.btn{display:inline-flex;align-items:center;background:#F77F00;color:#fff;font-weight:600;padding:3px 8px;font-size:11px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.btn:hover{transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:#171717;border:1px solid #d1d0c4;border-radius:4px;transition:.15s}
+.btn-secondary:hover{background:#f7f5ef;color:#F77F00}
+.img{display:flex;justify-content:center}
+.img img{width:160px;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:8px}
+.bento-item{background:#fff;padding:4px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:.15s}
+.bento-item:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;background:#F77F00;color:#fff;font-weight:600;font-size:9px;border-radius:50%;margin-bottom:4px}
+.bento-item h3{font-size:11px;font-weight:500;margin-bottom:2px;letter-spacing:-.01em}
+.bento-item p{font-size:9px;color:#64665c;margin:0}
+.section{padding:6px 0;border-top:1px solid #d1d0c4;font-size:11px}
 .section:first-of-type{border-top:none}
-.section-bck{background:var(--iic-panel)}
-.section-title{font-family:var(--font-serif);font-size:var(--size-4xl);font-weight:normal;line-height:1.05;margin-bottom:var(--space-sm);letter-spacing:-.02em}
-.section-tag{display:inline-block;font-size:var(--size-xs);letter-spacing:.2em;color:var(--iic-muted);text-transform:uppercase;margin-bottom:var(--space-sm)}
-.section-desc{color:var(--iic-muted);font-size:var(--size-sm);line-height:1.5;margin-bottom:var(--space-md)}
-.hero-image{text-align:center;margin:var(--space-xl) 0}
-.hero-image img{border-radius:var(--radius-md);box-shadow:var(--shadow-lg);transform:translateZ(0);max-width:100%;height:auto}
-.footer{margin-top:var(--space-2xl);padding:var(--space-xl) 0;border-top:1px solid var(--iic-line);font-size:var(--size-xs);color:var(--iic-muted);text-align:center}
-.footer a{color:var(--iic-ink);opacity:.7}
+.section-bck{background:#f7f5ef}
+.tag{font-size:9px;letter-spacing:.3em;color:#64665c;text-transform:uppercase;margin-bottom:4px}
+.title{font-family:"Georgia",serif;font-size:14px;font-weight:normal;line-height:1.05;margin-bottom:2px}
+.desc{color:#64665c;font-size:12px}
+.steps{display:flex;flex-direction:column;gap:4px}
+.step{display:flex;align-items:flex-start;gap:4px}
+.step-num{background:#F77F00;color:#fff;font-weight:600;padding:2px 4px;border-radius:2px;font-size:9px}
+.step-text strong{display:block;font-size:11px}
+.step-text small{color:#64665c;font-size:9px}
+.footer{padding:4px 0;border-top:1px solid #d1d0c4;text-align:center;color:#64665c;font-size:11px}
+.footer a{opacity:.5}
 .footer a:hover{opacity:1}
-@media(max-width<768px){
-  .top-inner{flex-wrap:wrap;gap:var(--space-md)}
-  .brand-text small{font-size:var(--size-xs)}
-  .hero{grid-template-columns:1fr;gap:var(--space-lg);align-items:center;text-align:center}
-  .hero h1{font-size:clamp(var(--size-3xl),6vw,var(--size-4xl))}
+@media(max-width:768px){
+  .main{grid-template-columns:1fr;gap:8px;text-align:center}
   .bento{grid-template-columns:1fr}
+  .wrap{padding:0 2px}
 }
-@media(max-width<480px){
-  .wrap{padding:0 var(--space-xs)}
-  .nav-links{gap:var(--space-sm);font-size:var(--size-xs)}
-  .hero{grid-template-columns:1fr}
-  .hero h1{font-size:clamp(var(--size-2xl),5vw,var(--size-3xl))}
+@media(max-width:480px){
+  .main{grid-template-columns:1fr;gap:8px}
+  .bento{grid-template-columns:1fr}
+  .title{font-size:13px}
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="top-inner wrap"><a class="brand" href="#main" aria-label="Impeccable Intelligence Consulting home"><img class="brand-logo" src="assets/iic-logo-stacked.svg" alt="Impeccable Intelligence Consulting logo"><span class="brand-text"><strong>IIC</strong><small>AI TRAINING · CONSULTING</small></span></a><nav class="nav-links" aria-label="Main navigation"><a href="#learn">Work</a><a href="#how">Session</a><a href="#book">Book</a></nav></div></header>
-<main id="main" class="wrap">
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-text">
-    <p class="quote">Make AI <em>understandable.</em><br>Make it <em>useful.</em></p>
-    <p class="lead">One-on-one training for AI consultants in Denver or online.<br>$50 per 60 minutes, pay after.</p>
-    <a class="button" href="#book">Request a session</a>
-    <p style="margin-top:var(--space-sm);font-size:var(--size-xs);color:var(--iic-muted)">Free 15-min intro call</p>
-  </div>
-  <div class="hero-image"><img src="assets/social-banner-hero.webp" alt="Diverse team analyzing data" loading="lazy"></div>
+<header class="header"><div class="wrap">
+<a class="logo" href="#"><img src="favicon.svg" width="16" height="16" alt="IIC">IIC</a>
+<nav class="nav"><a href="#work">Work</a><a href="#how">How</a><a href="#book">Book</a></nav>
+</div></header>
+<main class="wrap">
+<section class="main">
+<div>
+<p class="quote">Make AI <em>understandable.</em><br><em>Useful.</em></p>
+<p class="desc" style="margin:4px 0">$50 | 60 min | Meet or Denver | Pay after</p>
+<div><a class="btn" href="#book">Book</a></div>
+</div>
+<div class="img"><img src="assets/social-banner-hero.webp" alt="AI training"></div>
 </section>
-</main>
-<section id="learn" class="section">
-  <div class="wrap">
-    <p class="section-tag">The work</p>
-    <h2 class="section-title">AI training</h2>
-    <p class="section-desc">Choose the part of your practice that needs attention.</p>
-  </div>
-  <div class="bento">
-    <article class="bento-item"><span class="index">1</span><h3>Client workflows</h3><p>Turn repeated tasks into AI-assisted processes with human checks.</p></article>
-    <article class="bento-item"><span class="index">2</span><h3>Prompts & testing</h3><p>Build test cases, compare outputs, find failures early.</p></article>
-    <article class="bento-item"><span class="index">3</span><h3>Scopes & proposals</h3><p>Ask better questions. Define deliverable scope.</p></article>
-    <article class="bento-item"><span class="index">4</span><h3>Tools & judgment</h3><p>Weigh quality, cost, privacy. Decide where AI fits.</p></article>
-  </div>
-</section>
-<section id="how" class="section section-bck">
-  <div class="wrap">
-    <p class="section-tag">The session</p>
-    <h2 class="section-title">60 minutes together</h2>
-    <p class="section-desc">Bring your project. Pay after.</p>
-  </div>
-  <div class="wrap" style="display:flex;flex-direction:column;gap:var(--space-md)">
-    <div style="display:flex;align-items:flex-start;gap:var(--space-sm)">
-      <span class="session-number">01</span>
-      <div>
-        <strong style="font-size:var(--size-sm)">Tell me what you're working on</strong>
-        <div class="session-details">Free 15-min chat. Share your project via form.</div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:var(--space-sm)">
-      <span class="session-number">02</span>
-      <div>
-        <strong style="font-size:var(--size-sm)">Work together</strong>
-        <div class="session-details">60 min focused session. Your deliverables, next steps.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="book" class="section">
-  <div class="wrap">
-    <p class="section-tag">Book</p>
-    <h2 class="section-title">What are you figuring out?</h2>
-    <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-sm)">
-      <a class="button" href="#main">Request a session</a>
-      <a class="button secondary" href="tel:+17205077846">(720) 507-7846</a>
-    </div>
-    <p style="font-size:var(--size-xs);color:var(--iic-muted);margin:0">$50 / hour. Pay afterward. Google Meet or Denver.</p>
-  </div>
-</section>
-<footer class="footer"><div class="wrap"><span>IIC · Eli Kenny</span><span>Denver, CO & online</span><a href="#main">Back to top</a></div></footer>
+<section id="work" class="section"><div class="wrap">
+<p class="tag">The work</p><h2 class="title">AI Training</h2>
+<p class="desc">Focus</p>
+<div class="bento">
+<article class="bento-item"><span class="num">1</span><h3>Workflows</h3><p>Checks</p></article>
+<article class="bento-item"><span class="num">2</span><h3>Prompts</h3><p>Issues</p></article>
+<article class="bento-item"><span class="num">3</span><h3>Scopes</h3><p>Scope</p></article>
+<article class="bento-item"><span class="num">4</span><h3>Tools</h3><p>Decisions</p></article>
+</div>
+</div></section>
+<section id="how" class="section section-bck"><div class="wrap">
+<p class="tag">The session</p><h2 class="title">60 min</h2>
+<p class="desc">Pay after</p>
+<div class="steps">
+<div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><small>Intro</small></div></div>
+<div class="step"><span class="step-num">02</span><div class="step-text"><strong>Focus</strong><small>Next steps</small></div></div>
+</div>
+</div></section>
+<section id="book" class="section"><div class="wrap">
+<p class="tag">Book</p><h2 class="title">?</h2>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin:4px 0">
+<a class="btn" href="#">Request</a>
+<a class="btn btn-secondary" href="tel:+17205077846">(720) 507-7846</a>
+</div>
+<p style="margin:0">$50/hr. Pay after.</p>
+</div></section>
+<footer class="footer"><div class="wrap"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
 </body>
 </html>
