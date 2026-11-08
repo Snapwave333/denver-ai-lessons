@@ -3,130 +3,209 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Impeccable Intelligence Consulting — AI Training & Consulting</title>
-<meta name="description" content="Make AI understandable. Make it useful. AI education, consulting, and implementation for real-world workflows. $50 for 60 minutes, Denver or Google Meet.">
-<meta property="og:title" content="Impeccable Intelligence Consulting">
-<meta property="og:description" content="Make AI understandable. Make it useful. AI education, consulting, and implementation for real-world workflows.">
-<meta property="og:image" content="https://snapwave333.github.io/denver-ai-lessons/assets/iic-social-banner.png">
+<title>Impeccable Intelligence Consulting — AI Training for Consultants</title>
+<meta name="description" content="Private one-on-one AI training for AI consultants. Client workflows, prompting & testing, project scoping, tool selection, responsible data handling. $50/60min, pay after. Free 15-min intro. Denver or Google Meet.">
+<meta property="og:title" content="Impeccable Intelligence Consulting — AI Training for Consultants">
+<meta property="og:description" content="Private one-on-one AI training for AI consultants. Five focus areas. $50/60min, pay after session. Free 15-min intro chat.">
+<meta property="og:image" content="https://snapwave333.github.io/denver-ai-lessons/assets/biomorph-hero.svg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snapwave333.github.io/denver-ai-lessons/">
-<meta name="theme-color" content="#211716">
+<meta name="theme-color" content="#0a0f0d">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="header">
+<header class="header" role="banner">
   <div class="wrap header__in">
     <a class="brand" href="#top" aria-label="Impeccable Intelligence Consulting — home">
       <img class="logo" src="assets/iic-logo-horizontal-light.svg" alt="Impeccable Intelligence Consulting">
     </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#work">The Work</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#approach">Approach</a>
+      <a href="#focus">Focus Areas</a>
       <a href="#session">The Session</a>
-      <a href="#book">Book</a>
+      <a href="#book" class="nav-cta">Book</a>
     </nav>
   </div>
+  <div class="header__glow" aria-hidden="true"></div>
 </header>
 
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section class="hero night">
-    <div class="wrap">
-      <div class="hero__grid">
-        <div class="hero__type">
-          <p class="eyebrow">AI Education &middot; Consulting &middot; Implementation</p>
-          <h1 class="display">Make AI<br>understandable.<br>Make it useful.</h1>
-          <p class="lead">AI education, consulting, and implementation for real-world workflows. One project, one conversation, sixty minutes &mdash; and you pay after.</p>
-          <div class="actions">
-            <a class="btn btn--amber" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
-            <a class="link" href="tel:+17205077846">Or call (720) 507-7846</a>
-          </div>
-        </div>
-
-        <figure class="hero__media">
-          <img src="assets/hero-session.png" alt="A consultant and a client working together over a laptop at a table">
-          <figcaption class="hero__caption">One project, worked live, in an hour</figcaption>
-        </figure>
-      </div>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__bg" aria-hidden="true">
+      <svg class="hero__blob" viewBox="0 0 640 640" preserveAspectRatio="none">
+        <use href="assets/biomorph-hero.svg#bio-colony"></use>
+      </svg>
+      <div class="hero__grid-overlay" aria-hidden="true"></div>
     </div>
 
-    <div class="hero__facts">
-      <div class="wrap facts">
-        <div class="fact">
-          <span class="fact__k">Duration</span>
-          <span class="fact__v">60 min</span>
+    <div class="wrap hero__content">
+      <div class="hero__text">
+        <p class="eyebrow" data-reveal>AI Training for Consultants</p>
+        <h1 id="hero-title" class="display" data-reveal>Private AI training<br>for working consultants</h1>
+        <p class="lead" data-reveal>Five focus areas. One live problem per session. You leave with a written plan, not a vague feeling. $50 flat, pay after. Free 15-minute intro chat.</p>
+        <div class="actions" data-reveal>
+          <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
+          <a class="btn btn--ghost" href="tel:+17205077846">Or call (720) 507-7846</a>
         </div>
-        <div class="fact">
-          <span class="fact__k">Flat rate</span>
-          <span class="fact__v">$50</span>
+        <ul class="hero__badges" data-reveal>
+          <li><span class="badge__dot" aria-hidden="true"></span>Denver-area home visits</li>
+          <li><span class="badge__dot" aria-hidden="true"></span>Google Meet worldwide</li>
+          <li><span class="badge__dot" aria-hidden="true"></span>Venmo / Zelle after</li>
+        </ul>
+      </div>
+
+      <figure class="hero__visual" data-reveal>
+        <img src="assets/biomorph-hero.svg" alt="Biomorphic cellular composition — an abstract colony of organic membranes threaded by filaments over a golden-angle point field">
+        <figcaption class="visually-hidden">Biomorphic cellular composition representing adaptive intelligence</figcaption>
+      </figure>
+    </div>
+
+    <div class="hero__footer" data-reveal>
+      <div class="wrap hero__stats">
+        <div class="stat">
+          <span class="stat__value">5</span>
+          <span class="stat__label">Focus areas</span>
         </div>
-        <div class="fact">
-          <span class="fact__k">Where</span>
-          <span class="fact__v">Denver or Meet</span>
+        <div class="stat">
+          <span class="stat__value">60</span>
+          <span class="stat__label">Minutes per session</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">$50</span>
+          <span class="stat__label">Flat rate</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value">0</span>
+          <span class="stat__label">Retainers</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ THE WORK ============ -->
-  <section id="work" class="section">
+  <!-- ============ APPROACH ============ -->
+  <section id="approach" class="section" aria-labelledby="approach-title">
+    <div class="section__bg" aria-hidden="true">
+      <img src="assets/biomorph-cells.svg" alt="" class="section__pattern">
+      <div class="section__gradient" aria-hidden="true"></div>
+    </div>
+
     <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">01 &mdash; The Work</p>
-          <h2 class="h2">Four things<br>we make better</h2>
-        </div>
-        <p class="body">Every session starts from your actual job, not a slide deck. We work on one live problem and leave you with something you can use on Monday.</p>
+      <header class="section__head" data-reveal>
+        <p class="eyebrow">01 — How it works</p>
+        <h2 id="approach-title" class="h2">Adaptive process,<br>not a script</h2>
+      </header>
+
+      <div class="approach__grid">
+        <article class="approach__card" data-reveal>
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 38c-9.94 0-18-8.06-18-18S14.06 6 24 6s18 8.06 18 18-8.06 18-18 18z" stroke="currentColor" stroke-width="1.5"/><path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="card__title">Diagnose first</h3>
+          <p class="card__body">We start with your actual client work — not a curriculum. One live problem defines the session scope.</p>
+        </article>
+
+        <article class="approach__card" data-reveal>
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 38c-9.94 0-18-8.06-18-18S14.06 6 24 6s18 8.06 18 18-8.06 18-18 18z" stroke="currentColor" stroke-width="1.5"/><path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="card__title">Work it live</h3>
+          <p class="card__body">We build, test, and refine together in real time. Prompts, workflows, tool configs — whatever the problem demands.</p>
+        </article>
+
+        <article class="approach__card" data-reveal>
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 38c-9.94 0-18-8.06-18-18S14.06 6 24 6s18 8.06 18 18-8.06 18-18 18z" stroke="currentColor" stroke-width="1.5"/><path d="M14 24l6 6 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="card__title">Leave with a plan</h3>
+          <p class="card__body">Written next steps, not a vague feeling. Specific prompts, workflow updates, tool configs, and a check-in cadence.</p>
+        </article>
       </div>
+    </div>
+  </section>
 
-      <div class="services">
-        <article class="svc">
-          <div class="svc__num">01</div>
-          <div>
-            <h3 class="svc__title">Workflows</h3>
-            <p class="svc__body">Best practices and protocols for the AI you already run. The habits, checks, and repeatable patterns that keep output consistent instead of lucky.</p>
-          </div>
-          <div class="svc__media">
-            <img src="assets/svc-workflows.png" alt="Two colleagues mapping a workflow together on a glass wall">
+  <!-- ============ FOCUS AREAS ============ -->
+  <section id="focus" class="section section--alt" aria-labelledby="focus-title">
+    <div class="section__bg" aria-hidden="true">
+      <div class="section__filaments" aria-hidden="true"></div>
+    </div>
+
+    <div class="wrap">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow">02 — What we cover</p>
+        <h2 id="focus-title" class="h2">Five areas where<br>consultants get stuck</h2>
+      </header>
+
+      <div class="focus__grid">
+        <article class="focus__item" data-reveal>
+          <div class="focus__num">01</div>
+          <div class="focus__content">
+            <h3 class="focus__title">Client Workflows</h3>
+            <p class="focus__desc">Embed AI into delivery without breaking what already works. Repeatable patterns, quality gates, and handoff protocols your clients can actually run.</p>
+            <ul class="focus__tags">
+              <li>SOP design</li>
+              <li>Review loops</li>
+              <li>Version control for prompts</li>
+            </ul>
           </div>
         </article>
 
-        <article class="svc">
-          <div class="svc__num">02</div>
-          <div>
-            <h3 class="svc__title">Prompts</h3>
-            <p class="svc__body">Writing and optimization that survives real data. Structure, context, constraints, and evaluation that hold up when the stakes are higher than a demo.</p>
-          </div>
-          <div class="svc__media">
-            <img src="assets/svc-prompts.png" alt="A person typing on a laptop beside a notebook in natural window light">
-          </div>
-        </article>
-
-        <article class="svc">
-          <div class="svc__num">03</div>
-          <div>
-            <h3 class="svc__title">Scoping</h3>
-            <p class="svc__body">Project planning before anyone writes code. Scope, risk, and payoff in a single hour, so you know what's worth building before you build it.</p>
-          </div>
-          <div class="svc__media">
-            <img src="assets/svc-scoping.png" alt="A person writing a project plan in a notebook at a wooden desk">
+        <article class="focus__item" data-reveal>
+          <div class="focus__num">02</div>
+          <div class="focus__content">
+            <h3 class="focus__title">Prompting & Testing</h3>
+            <p class="focus__desc">Structure, constraints, and evaluation that hold up on real client data. Move beyond trial-and-error to reliable, auditable prompt engineering.</p>
+            <ul class="focus__tags">
+              <li>Few-shot design</li>
+              <li>Eval frameworks</li>
+              <li>Regression testing</li>
+            </ul>
           </div>
         </article>
 
-        <article class="svc">
-          <div class="svc__num">04</div>
-          <div>
-            <h3 class="svc__title">Tools</h3>
-            <p class="svc__body">Integrations and setup that outlive the demo. The right tools, connected to the right places, configured so the team can run them without you.</p>
+        <article class="focus__item" data-reveal>
+          <div class="focus__num">03</div>
+          <div class="focus__content">
+            <h3 class="focus__title">Project Scoping</h3>
+            <p class="focus__desc">Define scope, risk, and payoff before anyone writes code. Turn vague client asks into fixed-scope proposals with clear acceptance criteria.</p>
+            <ul class="focus__tags">
+              <li>Discovery frameworks</li>
+              <li>Risk matrices</li>
+              <li>Pricing models</li>
+            </ul>
           </div>
-          <div class="svc__media">
-            <img src="assets/svc-tools.png" alt="A person working across a laptop and second monitor in a tidy office">
+        </article>
+
+        <article class="focus__item" data-reveal>
+          <div class="focus__num">04</div>
+          <div class="focus__content">
+            <h3 class="focus__title">Tool Selection</h3>
+            <p class="focus__desc">Pick the right stack for the job — not the trendiest. Local models, API wrappers, RAG, eval tools, orchestration. Configured so the team runs it without you.</p>
+            <ul class="focus__tags">
+              <li>Local vs API tradeoffs</li>
+              <li>Cost modeling</li>
+              <li>Integration patterns</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="focus__item" data-reveal>
+          <div class="focus__num">05</div>
+          <div class="focus__content">
+            <h3 class="focus__title">Responsible Data Handling</h3>
+            <p class="focus__desc">Client data never trains models. Local-first architectures, anonymization pipelines, retention policies, and compliance checklists for regulated work.</p>
+            <ul class="focus__tags">
+              <li>Data classification</li>
+              <li>Anonymization</li>
+              <li>Retention & deletion</li>
+            </ul>
           </div>
         </article>
       </div>
@@ -134,91 +213,162 @@
   </section>
 
   <!-- ============ THE SESSION ============ -->
-  <section id="session" class="section section--tight night">
+  <section id="session" class="section" aria-labelledby="session-title">
+    <div class="section__bg" aria-hidden="true">
+      <div class="section__orb" aria-hidden="true"></div>
+      <div class="section__orb section__orb--2" aria-hidden="true"></div>
+    </div>
+
     <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">02 &mdash; The Session</p>
-          <h2 class="h2">One hour,<br>one project</h2>
-        </div>
-        <p class="body">No retainers, no setup fees, no twelve-month packages. You bring a problem; we work on it live and write down what to do next.</p>
-      </div>
+      <header class="section__head" data-reveal>
+        <p class="eyebrow">03 — The Session</p>
+        <h2 id="session-title" class="h2">One hour.<br>One project.<br>Zero fluff.</h2>
+      </header>
 
-      <figure class="session__photo">
-        <img src="assets/session-wide.png" alt="A small group working around a laptop during a workshop">
-        <figcaption>One-on-one or a small group. We work it live, on your actual problem.</figcaption>
-      </figure>
-
-      <div class="session">
-        <div class="steps">
-          <div class="step">
-            <div class="step__n">01</div>
-            <div>
-              <h3 class="step__t">Work</h3>
-              <p class="step__d">Intro and scope. We pin down the one problem worth an hour.</p>
+      <div class="session__layout">
+        <div class="session__visual" data-reveal>
+          <figure class="session__frame">
+            <img src="assets/session-wide.png" alt="A consultant and client working together at a table with a laptop">
+            <div class="session__overlay" aria-hidden="true"></div>
+          </figure>
+          <div class="session__meta">
+            <div class="meta__item">
+              <span class="meta__label">Format</span>
+              <span class="meta__value">1:1 or small group</span>
             </div>
-          </div>
-          <div class="step">
-            <div class="step__n">02</div>
-            <div>
-              <h3 class="step__t">Flow</h3>
-              <p class="step__d">Build and refine. We work it live and fix it while it runs.</p>
+            <div class="meta__item">
+              <span class="meta__label">Where</span>
+              <span class="meta__value">Denver home/office or Meet</span>
             </div>
-          </div>
-          <div class="step">
-            <div class="step__n">03</div>
-            <div>
-              <h3 class="step__t">Finish</h3>
-              <p class="step__d">Summary and next steps. You leave with a written plan, not a vague feeling.</p>
+            <div class="meta__item">
+              <span class="meta__label">Intro</span>
+              <span class="meta__value">Free 15-min chat first</span>
             </div>
           </div>
         </div>
 
-        <aside class="price" aria-label="Session pricing">
-          <div class="price__amt">$50</div>
-          <div class="price__unit">Flat rate &middot; 60 min</div>
-          <p class="price__note">
-            <strong>Pay after the session.</strong>
-            No contracts. No retainers. No setup fees.
-          </p>
-        </aside>
+        <div class="session__details" data-reveal>
+          <ol class="session__steps">
+            <li class="step">
+              <span class="step__num">01</span>
+              <div class="step__content">
+                <h3 class="step__title">Scope & Align</h3>
+                <p>Fifteen minutes to pin down the one problem worth solving. No slide decks — we look at your actual work.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num">02</span>
+              <div class="step__content">
+                <h3 class="step__title">Build & Test</h3>
+                <p>Forty-five minutes of live work. Prompts, workflows, tool configs — we iterate until it works on your data.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num">03</span>
+              <div class="step__content">
+                <h3 class="step__title">Document & Plan</h3>
+                <p>Written summary with specific next steps, prompt templates, workflow updates, and a 30-day check-in trigger.</p>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="session__price" aria-label="Pricing">
+            <div class="price__amt">$50</div>
+            <div class="price__detail">
+              <p class="price__unit">Flat rate · 60 minutes</p>
+              <p class="price__terms"><strong>Pay after the session.</strong> Venmo or Zelle. No contracts, no retainers, no setup fees. If it wasn't useful, you don't pay.</p>
+            </div>
+            <div class="price__cta">
+              <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
+              <a class="btn btn--outline" href="tel:+17205077846">Call (720) 507-7846</a>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ CTA ============ -->
-  <section id="book" class="cta">
-    <img class="cta__motif" src="assets/iic-icon-ink.svg" alt="" aria-hidden="true">
-    <div class="wrap cta__in">
-      <div>
-        <h2 class="h2">Ready to get started?</h2>
-        <p>One project. One conversation. Sixty minutes in Denver or on Google Meet. Pay after, only if it was worth it.</p>
-      </div>
-      <div class="cta__actions">
-        <a class="btn btn--ink" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
-        <a class="btn btn--ghost-ink" href="tel:+17205077846">(720) 507-7846</a>
+  <section id="book" class="section cta-section" aria-labelledby="cta-title">
+    <div class="cta__bg" aria-hidden="true">
+      <svg class="cta__blob" viewBox="0 0 640 640" preserveAspectRatio="none">
+        <use href="assets/biomorph-hero.svg#bio-colony"></use>
+      </svg>
+      <div class="cta__grid" aria-hidden="true"></div>
+    </div>
+
+    <div class="wrap">
+      <div class="cta__content" data-reveal>
+        <h2 id="cta-title" class="h2">Ready to stop guessing<br>with AI?</h2>
+        <p class="cta__lead">Free 15-minute intro chat. Then one session, one live problem, written plan. $50 flat, pay after.</p>
+        <div class="cta__actions">
+          <a class="btn btn--light" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
+          <a class="btn btn--ghost-light" href="tel:+17205077846">(720) 507-7846</a>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
+<!-- ============ FOOTER ============ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__bg" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="footer__in">
-      <img class="footer__logo" src="assets/iic-logo-horizontal-dark.svg" alt="Impeccable Intelligence Consulting">
-      <div class="footer__meta">
-        <span>Eli Kenny &mdash; Consultant</span>
-        <a href="tel:+17205077846">(720) 507-7846</a>
-        <span>Denver, Colorado & online</span>
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/iic-logo-horizontal-dark.svg" alt="Impeccable Intelligence Consulting">
+        <p class="footer__tagline">Private AI training for working consultants. Adaptive process, live work, written plans.</p>
+        <div class="footer__contact">
+          <a href="tel:+17205077846" class="footer__phone">(720) 507-7846</a>
+          <span class="footer__location">Denver, Colorado & online</span>
+        </div>
       </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__col">
+          <h4 class="footer__heading">Training</h4>
+          <ul>
+            <li><a href="#approach">How it works</a></li>
+            <li><a href="#focus">Focus areas</a></li>
+            <li><a href="#session">The session</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Focus Areas</h4>
+          <ul>
+            <li><a href="#focus">Client Workflows</a></li>
+            <li><a href="#focus">Prompting & Testing</a></li>
+            <li><a href="#focus">Project Scoping</a></li>
+            <li><a href="#focus">Tool Selection</a></li>
+            <li><a href="#focus">Responsible Data</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Book</h4>
+          <ul>
+            <li><a href="#book">Request a session</a></li>
+            <li><a href="tel:+17205077846">Call (720) 507-7846</a></li>
+            <li><a href="#book">Free 15-min intro</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div class="footer__base">
-      <span>&copy; 2026 Impeccable Intelligence Consulting</span>
-      <a href="#top">Back to top</a>
+
+    <div class="footer__legal">
+      <div class="footer__divider" aria-hidden="true"></div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Impeccable Intelligence Consulting. All rights reserved.</p>
+        <nav class="footer__legal-links" aria-label="Legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </nav>
+      </div>
     </div>
   </div>
 </footer>
 
+<script src="scripts/main.js"></script>
 </body>
 </html>
