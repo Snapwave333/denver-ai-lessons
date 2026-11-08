@@ -1,0 +1,14 @@
+# Brand kit source material (large, not needed to serve the site)
+brandkit_extracted/
+*.zip
+
+# One-off helper scripts
+copy_favicons.py
+copy_logo.py
+list_brand.py
+read_file.py
+unzip_brand.py
+
+# Scratch files
+temp_page.html
+_mobile_test.html

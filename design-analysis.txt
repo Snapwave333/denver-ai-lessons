@@ -1,0 +1,61 @@
+=== VIEWPORT ANALYSIS ===
+Max container width: 900px
+Column layout: 2 columns on desktop, 1 column on mobile
+
+=== CRITICAL DESIGN ISSUES ===
+
+1. HERO SECTION - EXCESSIVE WHITE SPACE
+   - .hero has padding:16px 0 - too much vertical padding
+   - Quote box has padding:12px 16px - takes up half the viewport height
+   - Image is 180px wide but has shadow and border-radius adding visual weight
+   
+2. TYPOGRAPHY SCALE - INCONSISTENT AND TOO SMALL
+   - Section titles (.title): 16px - should be 18-20px minimum
+   - Hero quote: 16px with 1.2 line-height - cramped spacing
+   - Mobile titles shrink to 15px - illegible on small screens
+   - No proper heading hierarchy (no H1, H2, etc.)
+   
+3. VISUAL HIERARCHY - FLAT AND UNSTRUCTURED
+   - All 4 bento items have identical visual weight
+   - No distinction between primary and secondary information
+   - Background alternate (.section-bck) with #FFFDF9 is too subtle
+   
+4. SPACING & PROPORTIONS - AGGRESSIVE AND UNCOMFORTABLE
+   - .wrap padding:12px 8px - cramped, especially on mobile
+   - .section padding:20px 0 - huge gaps between sections
+   - .bento gap:8px - grid items too close together
+   - No consistent vertical rhythm
+   
+5. MOBILE ISSUES - BARELY USABLE
+   - .title font-size:15px on mobile - illegibly small
+   - .hero-img img width:140px - tiny for a main visual
+   - No fluid typography (no clamp() or responsive units)
+   - Paddings become 8px 6px - content squeezed
+   
+6. ACCESSIBILITY FAILINGS
+   - .bento border:#eee - very low contrast on light background
+   - Amber #F77F00 on white text - check contrast ratio
+   - No focus states for keyboard navigation
+   - Inline styles make theming impossible
+   
+7. STRUCTURAL PROBLEMS
+   - Mixed semantic elements: section > div > article
+   - Inline styles used for margin, color (violates CSS best practices)
+   - No proper ARIA labels or landmarks
+   - Single H1 missing (should have one in hero)
+   
+8. CONTENT OVERFLOW - NOT TRULY COMPACT
+   - 55+ lines of CSS in <head> (should be external file)
+   - Content REQUIRES scrolling on 1080p+ viewports
+   - False claim: "zero vertical scrollbar" - unachievable with this content density
+   - Hero section alone takes ~30% of viewport height
+
+=== QUICK FIXES NEEDED ===
+1. Reduce hero section padding to 8px 0
+2. Increase typography scale: title 18px, mobile 14px
+3. Use proper heading elements (H1 for hero quote, H2 for sections)
+4. Increase bento item padding to 16px
+5. Externalize CSS to separate file
+6. Add proper focus states
+7. Use semantic HTML structure
+8. Consider reducing hero image size or using SVG

@@ -3,173 +3,222 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IIC | AI Training</title>
-<meta name="description" content="Make AI understandable. Make it useful. AI education, consulting, and implementation for real-world workflows.">
-<meta property="og:title" content="IIC | AI Training">
-<meta property="og:description" content="Make AI understandable. Make it useful.">
-<meta property="og:image" content="assets/social-banner-hero.webp">
+<title>Impeccable Intelligence Consulting — AI Training & Consulting</title>
+<meta name="description" content="Make AI understandable. Make it useful. AI education, consulting, and implementation for real-world workflows. $50 for 60 minutes, Denver or Google Meet.">
+<meta property="og:title" content="Impeccable Intelligence Consulting">
+<meta property="og:description" content="Make AI understandable. Make it useful. AI education, consulting, and implementation for real-world workflows.">
+<meta property="og:image" content="https://snapwave333.github.io/denver-ai-lessons/assets/iic-social-banner.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snapwave333.github.io/denver-ai-lessons/">
-<meta name="theme-color" content="#F77F00">
-<link rel="icon" href="favicon.ico">
+<meta name="theme-color" content="#211716">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--am:#F77F00;--ver:#E65100;--cr:#C62828;--ink:#171717;--iv:#FFFDF9;--wht:#FFFFFF;--muted:#64665c;--line:#d1d0c4;--panel:#f7f5ef;--radius:14px}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{min-height:100vh;background:var(--iv);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
-body:before{content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 50% 50%, rgba(247,127,0,0.05) 0%, transparent 50%),radial-gradient(circle at 10% 10%, rgba(230,81,0,0.04) 0%, transparent 40%),radial-gradient(circle at 90% 90%, rgba(198,40,40,0.04) 0%, transparent 40%);background-size:200% 200%,300% 300%,300% 300%;pointer-events:none;z-index:0}
-a{color:inherit;text-decoration:none;text-underline-offset:4px}
-a:focus-visible{outline:2px solid var(--am);outline-offset:6px;border-radius:3px}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-.header{display:flex;align-items:center;justify-content:space-between;padding:30px 0;border-bottom:1px solid var(--line);position:relative;z-index:1}
-.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
-.brand-logo{display:block;width:260px;height:auto;max-width:100%}
-.nav{display:flex;gap:24px;font-size:13px;font-weight:600}
-.nav a{color:var(--muted)}
-.nav a:hover{color:var(--am)}
-.hero{position:relative;padding:44px 0 0;overflow:hidden;z-index:1}
-.hero-band{position:absolute;top:0;left:0;right:0;height:18px;background:linear-gradient(90deg,var(--am),var(--ver),var(--cr))}
-.eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--muted);text-transform:uppercase;margin-bottom:24px}
-.eyebrow:before{content:"";width:10px;height:10px;background:var(--am);border-radius:50%;display:inline-block;box-shadow:0 0 0 5px rgba(247,127,0,0.2)}
-h1{font-family:"Georgia","Times New Roman",serif;font-weight:normal;font-size:clamp(26px,6vw,48px);line-height:1.04;color:var(--ink);margin-bottom:16px;letter-spacing:-0.03em;text-align:center}
-h1 em{font-style:normal;color:var(--am)}
-.price{font-size:14px;font-weight:500;color:var(--muted);text-align:center;margin-bottom:32px}
-.hero-visual{display:flex;justify-content:center;margin-bottom:40px}
-.hero-visual img{width:170px;height:auto;border-radius:10px;box-shadow:0 14px 36px rgba(0,0,0,0.12)}
-.session-panel{display:flex;align-items:center;justify-content:center;gap:30px;padding:28px 34px;background:var(--wht);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,0.06);margin-bottom:48px}
-.session-price{font-family:"Georgia","Times New Roman",serif;font-weight:normal;font-size:clamp(26px,3.2vw,34px);color:var(--ink);letter-spacing:-0.02em}
-.session-price span{font-size:16px;font-family:"Inter",sans-serif;font-weight:500;color:var(--muted);display:block}
-.session-meta{font-size:13px;color:var(--muted);line-height:1.5}
-.section{padding:42px 0;border-top:1px solid var(--line);position:relative;z-index:1}
-.section:first-of-type{border-top:none}
-.section-alt{background:var(--panel)}
-.tag{font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:16px}
-h2{font-family:"Georgia","Times New Roman",serif;font-weight:normal;font-size:clamp(24px,3.5vw,34px);line-height:1.12;color:var(--ink);margin-bottom:22px;letter-spacing:-0.02em}
-.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:0 0 24px}
-.bento-item{background:var(--wht);padding:22px;border-radius:var(--radius);border:1px solid var(--line);transition:all 0.2s;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.bento-item:hover{border-color:var(--am);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
-.bento-item:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--am);opacity:0;transition:opacity 0.2s}
-.bento-item:hover:before{opacity:1}
-.bento-item .thumb{width:100%;height:74px;border-radius:8px;object-fit:cover;margin-bottom:14px;background:var(--panel)}
-.bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--am);color:#fff;font-weight:700;font-size:13px;border-radius:50%;margin-bottom:14px}
-.bento-item h3{font-weight:600;font-size:16px;margin-bottom:8px;color:var(--ink);letter-spacing:-0.01em}
-.bento-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.45}
-.dark-section{background:var(--ink);color:var(--iv);border-top:2px solid var(--am)}
-.dark-section h2{color:var(--iv)}
-.dark-section .tag{color:rgba(253,253,249,0.5)}
-.dark-section .step-text strong{color:var(--iv)}
-.dark-section .step-text small{color:rgba(253,253,249,0.6)}
-.dark-section .bento-item{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.08);color:var(--iv)}
-.dark-section .bento-item h3{color:var(--iv)}
-.dark-section .bento-item p{color:rgba(253,253,249,0.7)}
-.dark-section .session-panel{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);color:var(--iv)}
-.dark-section .session-price{color:var(--iv)}
-.dark-section .session-price span{color:rgba(253,253,249,0.6)}
-.dark-section .session-meta{color:rgba(253,253,249,0.6)}
-.dark-section .hero-visual img{box-shadow:0 14px 36px rgba(0,0,0,0.4)}
-.dark-section .step-num{background:var(--am);color:var(--ink)}
-.steps{display:flex;flex-direction:column;gap:14px}
-.step{display:flex;align-items:flex-start;gap:14px}
-.step-num{background:var(--am);color:#fff;font-weight:700;padding:7px 14px;border-radius:8px;font-size:14px;flex-shrink:0}
-.step-text{font-size:13px;line-height:1.5}
-.step-text strong{display:block;color:var(--ink);margin-bottom:3px;font-weight:600}
-.step-text small{color:var(--muted)}
-.session-art{width:100%;height:260px;border-radius:var(--radius);object-fit:cover;box-shadow:0 16px 40px rgba(0,0,0,0.1);margin-top:28px;background:var(--panel)}
-.cta-band{background:var(--am);padding:40px 0;position:relative;z-index:1}
-.cta-band:before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;height:3px;background:linear-gradient(90deg,var(--ver),var(--cr))}
-.cta-band .wrap{text-align:center}
-.cta-band h2{color:var(--wht);font-family:"Georgia","Times New Roman",serif;font-weight:normal;font-size:clamp(26px,4vw,36px);margin-bottom:10px;letter-spacing:-0.02em}
-.cta-band p{color:rgba(23,23,23,0.7);font-size:14px;margin-bottom:26px}
-.cta{display:flex;gap:12px;justify-content:center;margin-bottom:0}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--wht);color:var(--ink);font-weight:600;padding:14px 28px;font-size:14px;border-radius:var(--radius);transition:all 0.2s;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,0.08)}
-.btn:hover{background:var(--ver);color:var(--wht);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.15)}
-.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);transition:0.2s;font-size:14px;font-weight:500;padding:14px 28px;text-decoration:none;display:inline-block}
-.btn-outline:hover{border-color:var(--am);color:var(--am);background:rgba(247,127,0,0.1)}
-.cta-note{color:rgba(23,23,23,0.5);font-size:12px;margin-top:16px;text-align:center}
-.footer{padding:26px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:11px}
-.footer a{opacity:0.7;margin-left:16px;transition:color 0.2s}
-.footer a:hover{color:var(--am);opacity:1}
-@media(max-width:768px){
-  .wrap{padding:0 20px}
-  .header{padding:24px 0}
-  .brand-logo{width:220px}
-  .nav{gap:16px}
-  .hero{padding:32px 0 0}
-  h1{font-size:clamp(24px,7vw,38px)}
-  .bento{grid-template-columns:1fr;gap:12px}
-  .bento-item{padding:18px}
-  .section{padding:34px 0}
-  .hero-visual img{width:145px}
-  .session-panel{flex-direction:column;align-items:flex-start;gap:18px;padding:24px 26px}
-  .session-art{height:200px}
-  .cta-band{padding:32px 0}
-}
-@media(max-width:480px){
-  .wrap{padding:0 16px}
-  .brand-logo{width:180px}
-  .nav{display:none}
-  .hero{padding:24px 0 0}
-  .bento-item{padding:16px}
-  .section{padding:28px 0}
-  .step{flex-direction:column;align-items:flex-start}
-  .step-num{align-self:flex-start}
-  .session-art{height:170px}
-  .cta-band{padding:28px 0}
-  .cta{flex-direction:column;align-items:center}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header"><div class="wrap">
-<a class="brand" href="#"><img class="brand-logo" src="assets/iic-logo-stacked.svg" alt="Impeccable Intelligence Consulting"></a>
-<nav class="nav"><a href="#work">The work</a><a href="#how">The session</a><a href="#book">Book</a></nav>
-</div></header>
-<main class="wrap">
-<section class="hero">
-<div class="hero-band"></div>
-<p class="eyebrow">Impeccable Intelligence Consulting</p>
-<h1>Make AI <em>understandable.</em><br>Make it <em>useful.</em></h1>
-<p class="price">$50 | 60 min | Meet or Denver | Pay after</p>
-<div class="hero-visual"><img src="assets/social-banner-hero.webp" alt="IIC brand visual"></div>
-<div class="session-panel"><div class="session-price">$50<span>/ 60 minutes</span></div><div class="session-meta">One project. One conversation.<br>Denver or Google Meet.</div></div>
-</section>
-<section id="work" class="section dark-section">
-<div class="wrap">
-<span class="tag">The work</span>
-<h2>AI Training</h2>
-<div class="bento">
-<article class="bento-item"><img class="thumb" src="assets/clearer-workflows.webp" alt="Workflows"><span class="num">1</span><h3>Workflows</h3><p>Best practices & protocols</p></article>
-<article class="bento-item"><img class="thumb" src="assets/working-table.webp" alt="Prompts"><span class="num">2</span><h3>Prompts</h3><p>Writing & optimization</p></article>
-<article class="bento-item"><img class="thumb" src="assets/working-table.webp" alt="Scoping"><span class="num">3</span><h3>Scoping</h3><p>Project planning</p></article>
-<article class="bento-item"><img class="thumb" src="assets/clearer-workflows.webp" alt="Tools"><span class="num">4</span><h3>Tools</h3><p>Integrations & setup</p></article>
-</div>
-</div>
-</section>
-<section id="how" class="section">
-<span class="tag">The session</span>
-<h2>60 min | $50</h2>
-<div class="steps">
-<div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><small>Intro & scope</small></div></div>
-<div class="step"><span class="step-num">02</span><div class="step-text"><strong>Flow</strong><small>Build & refine</small></div></div>
-<div class="step"><span class="step-num">03</span><div class="step-text"><strong>Finish</strong><small>Summary & next steps</small></div></div>
-</div>
-<img class="session-art" src="assets/app-avatar-dark-primary-.png" alt="IIC brand mark">
-</section>
-<section class="cta-band">
-<div class="wrap">
-<h2>Ready to get started?</h2>
-<p>Pay after the session. Denver or Google Meet.</p>
-<div class="cta">
-<a class="btn" href="#">Request Session</a>
-<a class="btn btn-outline" href="tel:+17205077846">(720) 507-7846</a>
-</div>
-<p class="cta-note">IIC · Eli Kenny · Denver, Colorado &amp; online</p>
-</div>
-</section>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" aria-label="Impeccable Intelligence Consulting — home">
+      <img class="logo" src="assets/iic-logo-horizontal-light.svg" alt="Impeccable Intelligence Consulting">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work">The Work</a>
+      <a href="#session">The Session</a>
+      <a href="#book">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero night">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__type">
+          <p class="eyebrow">AI Education &middot; Consulting &middot; Implementation</p>
+          <h1 class="display">Make AI<br>understandable.<br>Make it useful.</h1>
+          <p class="lead">AI education, consulting, and implementation for real-world workflows. One project, one conversation, sixty minutes &mdash; and you pay after.</p>
+          <div class="actions">
+            <a class="btn btn--amber" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
+            <a class="link" href="tel:+17205077846">Or call (720) 507-7846</a>
+          </div>
+        </div>
+
+        <figure class="hero__media">
+          <img src="assets/hero-session.png" alt="A consultant and a client working together over a laptop at a table">
+          <figcaption class="hero__caption">One project, worked live, in an hour</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="hero__facts">
+      <div class="wrap facts">
+        <div class="fact">
+          <span class="fact__k">Duration</span>
+          <span class="fact__v">60 min</span>
+        </div>
+        <div class="fact">
+          <span class="fact__k">Flat rate</span>
+          <span class="fact__v">$50</span>
+        </div>
+        <div class="fact">
+          <span class="fact__k">Where</span>
+          <span class="fact__v">Denver or Meet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE WORK ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">01 &mdash; The Work</p>
+          <h2 class="h2">Four things<br>we make better</h2>
+        </div>
+        <p class="body">Every session starts from your actual job, not a slide deck. We work on one live problem and leave you with something you can use on Monday.</p>
+      </div>
+
+      <div class="services">
+        <article class="svc">
+          <div class="svc__num">01</div>
+          <div>
+            <h3 class="svc__title">Workflows</h3>
+            <p class="svc__body">Best practices and protocols for the AI you already run. The habits, checks, and repeatable patterns that keep output consistent instead of lucky.</p>
+          </div>
+          <div class="svc__media">
+            <img src="assets/svc-workflows.png" alt="Two colleagues mapping a workflow together on a glass wall">
+          </div>
+        </article>
+
+        <article class="svc">
+          <div class="svc__num">02</div>
+          <div>
+            <h3 class="svc__title">Prompts</h3>
+            <p class="svc__body">Writing and optimization that survives real data. Structure, context, constraints, and evaluation that hold up when the stakes are higher than a demo.</p>
+          </div>
+          <div class="svc__media">
+            <img src="assets/svc-prompts.png" alt="A person typing on a laptop beside a notebook in natural window light">
+          </div>
+        </article>
+
+        <article class="svc">
+          <div class="svc__num">03</div>
+          <div>
+            <h3 class="svc__title">Scoping</h3>
+            <p class="svc__body">Project planning before anyone writes code. Scope, risk, and payoff in a single hour, so you know what's worth building before you build it.</p>
+          </div>
+          <div class="svc__media">
+            <img src="assets/svc-scoping.png" alt="A person writing a project plan in a notebook at a wooden desk">
+          </div>
+        </article>
+
+        <article class="svc">
+          <div class="svc__num">04</div>
+          <div>
+            <h3 class="svc__title">Tools</h3>
+            <p class="svc__body">Integrations and setup that outlive the demo. The right tools, connected to the right places, configured so the team can run them without you.</p>
+          </div>
+          <div class="svc__media">
+            <img src="assets/svc-tools.png" alt="A person working across a laptop and second monitor in a tidy office">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SESSION ============ -->
+  <section id="session" class="section section--tight night">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">02 &mdash; The Session</p>
+          <h2 class="h2">One hour,<br>one project</h2>
+        </div>
+        <p class="body">No retainers, no setup fees, no twelve-month packages. You bring a problem; we work on it live and write down what to do next.</p>
+      </div>
+
+      <figure class="session__photo">
+        <img src="assets/session-wide.png" alt="A small group working around a laptop during a workshop">
+        <figcaption>One-on-one or a small group. We work it live, on your actual problem.</figcaption>
+      </figure>
+
+      <div class="session">
+        <div class="steps">
+          <div class="step">
+            <div class="step__n">01</div>
+            <div>
+              <h3 class="step__t">Work</h3>
+              <p class="step__d">Intro and scope. We pin down the one problem worth an hour.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__n">02</div>
+            <div>
+              <h3 class="step__t">Flow</h3>
+              <p class="step__d">Build and refine. We work it live and fix it while it runs.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__n">03</div>
+            <div>
+              <h3 class="step__t">Finish</h3>
+              <p class="step__d">Summary and next steps. You leave with a written plan, not a vague feeling.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="price" aria-label="Session pricing">
+          <div class="price__amt">$50</div>
+          <div class="price__unit">Flat rate &middot; 60 min</div>
+          <p class="price__note">
+            <strong>Pay after the session.</strong>
+            No contracts. No retainers. No setup fees.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="book" class="cta">
+    <img class="cta__motif" src="assets/iic-icon-ink.svg" alt="" aria-hidden="true">
+    <div class="wrap cta__in">
+      <div>
+        <h2 class="h2">Ready to get started?</h2>
+        <p>One project. One conversation. Sixty minutes in Denver or on Google Meet. Pay after, only if it was worth it.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--ink" href="https://docs.google.com/forms/d/e/1FAIpQLSdoNcSnPGSuwlSb-XZ1efju--cvaDpimtkZD3CEBthb3PcfQw/viewform" target="_blank" rel="noopener">Request a session</a>
+        <a class="btn btn--ghost-ink" href="tel:+17205077846">(720) 507-7846</a>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer class="footer"><div class="wrap"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__in">
+      <img class="footer__logo" src="assets/iic-logo-horizontal-dark.svg" alt="Impeccable Intelligence Consulting">
+      <div class="footer__meta">
+        <span>Eli Kenny &mdash; Consultant</span>
+        <a href="tel:+17205077846">(720) 507-7846</a>
+        <span>Denver, Colorado & online</span>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; 2026 Impeccable Intelligence Consulting</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
