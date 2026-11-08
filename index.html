@@ -16,88 +16,92 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--am:#F77F00;--ver:#E65100;--cr:#C62828;--ink:#171717;--iv:#FFFDF9;--wht:#FFFFFF;--txt:#64665c;--radius:10px}
+:root{--am:#F77F00;--ver:#E65100;--cr:#C62828;--ink:#171717;--iv:#FFFDF9;--wht:#FFFFFF;--muted:#64665c;--line:#d1d0c4;--panel:#f7f5ef;--radius:10px}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{min-height:100vh;background:var(--iv);color:var(--ink);font-family:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrapper{max-width:880px;margin:0 auto;padding:0 16px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #e8e8e8}
-.logo{font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;letter-spacing:-0.02em}
-.logo img{width:20px;height:20px}
-.nav a{font-size:13px;font-weight:500;color:var(--txt);margin-left:20px;letter-spacing:0.02em;transition:color 0.2s}
-.nav a:hover{color:var(--ink)}
-.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 0}
-.quote{font-family:"Inter",sans-serif;font-weight:700;font-size:32px;line-height:1.15;color:var(--ink);margin-bottom:14px;letter-spacing:-0.02em}
-.quote em{font-style:normal}
-.price{font-size:14px;font-weight:500;color:var(--txt);margin-bottom:22px}
-.hero-img{margin-bottom:24px}
-.hero-img img{width:120px;height:auto;border-radius:6px}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--am);color:#fff;font-weight:600;padding:12px 24px;font-size:14px;border-radius:var(--radius);box-shadow:none;transition:background 0.2s,transform 0.15s;text-decoration:none}
-.btn:hover{background:var(--ver);transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:var(--ink);border:1px solid #e8e8e8;border-radius:var(--radius);transition:0.2s;font-size:14px;font-weight:500;padding:12px 24px;text-decoration:none;display:inline-block}
-.btn-secondary:hover{border-color:var(--am);color:var(--am);background:rgba(247,127,0,0.05)}
-.section{padding:28px 0;border-top:1px solid #e8e8e8}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{min-height:100vh;background:var(--iv);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;text-underline-offset:4px}
+a:focus-visible{outline:2px solid var(--am);outline-offset:6px;border-radius:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.header{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand-logo{display:block;width:260px;height:auto;max-width:100%}
+.nav{display:flex;gap:24px;font-size:13px;font-weight:500}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--am)}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:48px 0 56px}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;margin-bottom:24px}
+.eyebrow:before{content:"";width:8px;height:8px;background:var(--am);border-radius:50%;display:inline-block}
+h1{font-family:"Georgia","Times New Roman",serif;font-weight:normal;font-size:clamp(34px,5vw,48px);line-height:1.1;color:var(--ink);margin-bottom:16px;letter-spacing:-0.02em}
+h1 em{font-style:normal;color:var(--am)}
+.price{font-size:14px;font-weight:500;color:var(--muted);margin-bottom:26px}
+.hero-img{margin-top:22px}
+.hero-img img{width:130px;height:auto;border-radius:6px}
+.section{padding:36px 0;border-top:1px solid var(--line)}
 .section:first-of-type{border-top:none}
-.section-bck{background:var(--iv)}
-.tag{font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--txt);text-transform:uppercase;margin-bottom:8px;display:block}
-.title{font-weight:700;font-size:26px;line-height:1.15;margin-bottom:12px;color:var(--ink);letter-spacing:-0.01em}
+.section-alt{background:var(--panel)}
+.tag{font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:10px}
+h2{font-family:"Georgia","Times New Roman",serif;font-weight:normal;font-size:clamp(24px,3vw,30px);line-height:1.15;color:var(--ink);margin-bottom:14px;letter-spacing:-0.02em}
 .bento{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
-.bento-item{background:#fff;padding:20px;border-radius:var(--radius);border:1px solid #f0f0f0;transition:border-color 0.2s,box-shadow 0.2s}
-.bento-item:hover{border-color:#e0e0e0}
+.bento-item{background:var(--wht);padding:20px;border-radius:var(--radius);border:1px solid var(--line);transition:border-color 0.2s}
+.bento-item:hover{border-color:var(--am)}
 .bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--am);color:#fff;font-weight:700;font-size:10px;border-radius:50%;margin-bottom:10px}
 .bento-item h3{font-weight:600;font-size:15px;margin-bottom:6px;color:var(--ink);letter-spacing:-0.01em}
-.bento-item p{font-size:13px;color:var(--txt);margin:0;line-height:1.4}
-.steps{display:flex;flex-direction:column;gap:10px}
-.step{display:flex;align-items:flex-start;gap:10px}
+.bento-item p{font-size:13px;color:var(--muted);margin:0;line-height:1.4}
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:flex;align-items:flex-start;gap:12px}
 .step-num{background:var(--am);color:#fff;font-weight:700;padding:5px 10px;border-radius:6px;font-size:12px;flex-shrink:0}
-.step-text{font-size:13px;line-height:1.4}
+.step-text{font-size:13px;line-height:1.45}
 .step-text strong{display:block;color:var(--ink);margin-bottom:2px;font-weight:600}
-.step-text small{color:var(--txt)}
-.footer{padding:22px 0;border-top:1px solid #e8e8e8;text-align:center;color:var(--txt);font-size:12px}
+.step-text small{color:var(--muted)}
+.footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:12px}
 .footer a{opacity:0.7;margin-left:14px;transition:color 0.2s}
 .footer a:hover{color:var(--am);opacity:1}
-.cta-wrapper{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0}
-.cta-note{color:var(--txt);font-size:13px;margin-top:10px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--am);color:#fff;font-weight:600;padding:12px 24px;font-size:14px;border-radius:var(--radius);transition:background 0.2s,transform 0.15s;text-decoration:none}
+.btn:hover{background:var(--ver);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);transition:0.2s;font-size:14px;font-weight:500;padding:12px 24px;text-decoration:none;display:inline-block}
+.btn-outline:hover{border-color:var(--am);color:var(--am);background:rgba(247,127,0,0.06)}
+.cta-note{color:var(--muted);font-size:13px;margin-top:10px;text-align:center}
 @media(max-width:768px){
-  .wrapper{padding:0 14px}
+  .wrap{padding:0 20px}
+  .header{padding:22px 0}
+  .brand-logo{width:220px}
+  .nav{gap:16px}
+  .hero{padding:36px 0 44px}
+  h1{font-size:clamp(28px,6vw,36px)}
   .bento{grid-template-columns:1fr;gap:12px}
-  .hero-img img{width:100px}
-  .quote{font-size:26px}
-  .title{font-size:22px}
-  .nav a{margin-left:14px}
-  .section{padding:22px 0}
   .bento-item{padding:16px}
-  .steps{gap:8px}
-  .step{flex-direction:column;align-items:flex-start}
-  .step-num{align-self:flex-start}
+  .section{padding:28px 0}
+  .hero-img img{width:110px}
 }
 @media(max-width:480px){
-  .wrapper{padding:0 12px}
+  .wrap{padding:0 16px}
+  .brand-logo{width:180px}
+  .nav{display:none}
+  .hero{padding:28px 0 36px}
   .bento-item{padding:14px}
-  .bento{gap:10px}
-  .quote{font-size:22px}
-  .title{font-size:20px}
-  .section{padding:18px 0}
-  .logo{font-size:16px}
-  .logo img{width:16px;height:16px}
+  .section{padding:22px 0}
+  .step{flex-direction:column;align-items:flex-start}
+  .step-num{align-self:flex-start}
 }
 </style>
 </head>
 <body>
-<header class="header"><div class="wrapper">
-<a class="logo" href="#"><img src="favicon.svg" alt="IIC">IIC</a>
-<nav class="nav"><a href="#work">Work</a><a href="#how">How</a><a href="#book">Book</a></nav>
+<header class="header"><div class="wrap">
+<a class="brand" href="#"><img class="brand-logo" src="assets/iic-logo-stacked.svg" alt="Impeccable Intelligence Consulting"></a>
+<nav class="nav"><a href="#work">The work</a><a href="#how">The session</a><a href="#book">Book</a></nav>
 </div></header>
-<main class="wrapper">
+<main class="wrap">
 <section class="hero">
-<h1 class="quote">Make AI <em>understandable.</em><br><em>Useful.</em></h1>
+<p class="eyebrow">Impeccable Intelligence Consulting</p>
+<h1>Make AI <em>understandable.</em><br>Make it <em>useful.</em></h1>
 <p class="price">$50 | 60 min | Meet or Denver | Pay after</p>
-<div class="hero-img"><img src="assets/social-banner-hero.webp" alt="AI training"></div>
+<div class="hero-img"><img src="assets/social-banner-hero.webp" alt="IIC brand visual"></div>
 </section>
 <section id="work" class="section">
 <span class="tag">The work</span>
-<h2 class="title">AI Training</h2>
+<h2>AI Training</h2>
 <div class="bento">
 <article class="bento-item"><span class="num">1</span><h3>Workflows</h3><p>Best practices & protocols</p></article>
 <article class="bento-item"><span class="num">2</span><h3>Prompts</h3><p>Writing & optimization</p></article>
@@ -105,9 +109,9 @@ a{color:inherit;text-decoration:none}
 <article class="bento-item"><span class="num">4</span><h3>Tools</h3><p>Integrations & setup</p></article>
 </div>
 </section>
-<section id="how" class="section section-bck">
+<section id="how" class="section section-alt">
 <span class="tag">The session</span>
-<h2 class="title">60 min | $50</h2>
+<h2>60 min | $50</h2>
 <div class="steps">
 <div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><small>Intro & scope</small></div></div>
 <div class="step"><span class="step-num">02</span><div class="step-text"><strong>Flow</strong><small>Build & refine</small></div></div>
@@ -116,14 +120,14 @@ a{color:inherit;text-decoration:none}
 </section>
 <section id="book" class="section">
 <span class="tag">Book</span>
-<h2 class="title">Ready to get started?</h2>
-<div class="cta-wrapper">
+<h2>Ready to get started?</h2>
+<div class="cta">
 <a class="btn" href="#">Request Session</a>
-<a class="btn btn-secondary" href="tel:+17205077846">(720) 507-7846</a>
+<a class="btn btn-outline" href="tel:+17205077846">(720) 507-7846</a>
 </div>
 <p class="cta-note">Pay after session. Denver or Google Meet.</p>
 </section>
 </main>
-<footer class="footer"><div class="wrapper"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
+<footer class="footer"><div class="wrap"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
 </body>
 </html>
