@@ -13,95 +13,104 @@
 <meta name="theme-color" content="#F77F00">
 <link rel="icon" href="favicon.ico">
 <style>
-:root{--iic-amber:#F77F00;--iic-vermilion:#E65100;--iic-crimson:#C62828;--iic-ink:#171717;--iic-ivory:#FFFDF9;--iic-night:#211716}
+:root{
+  --iic-amber:#F77F00;--iic-vermilion:#E65100;--iic-crimson:#C62828;--iic-ink:#171717;--iic-ivory:#FFFDF9;--iic-night:#211716;
+  --bento-bg:#fff;--bento-border:#eee;--text-primary:#171717;--text-secondary:#64665c
+}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body,height:100%;background:var(--iic-ivory);color:var(--iic-ink);font-family:"Inter",system-ui,sans-serif;font-size:14px;line-height:1.4
+html,body,min-height:100%;background:var(--iic-ivory);color:var(--text-primary);font-family:"Inter",system-ui,sans-serif;font-size:14px;line-height:1.4
 a{color:inherit;text-decoration:none}
-.wrap{max-width:900px;margin:auto;padding:0 4px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid var(--iic-ink)}
-.logo{font-size:13px;font-weight:600}
-.nav a{font-size:11px;opacity:.5;margin-left:8px;letter-spacing:.3em;text-transform:uppercase}
+.wrap{max-width:900px;margin:auto;padding:12px 8px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--bento-border)}
+.logo{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}
+.logo img{width:18px;height:18px}
+.nav a{font-size:11px;opacity:.6;margin-left:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-secondary);transition:opacity .2s}
 .nav a:hover{opacity:1}
-.main{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;padding:8px 0;align-items:center}
-.quote{font-family:"Georgia",serif;font-size:16px;line-height:1.1;background:var(--iic-ivory);padding:6px 10px;border-left:4px solid var(--iic-amber)}
-.btn{display:inline-flex;align-items:center;background:var(--iic-amber);color:#fff;font-weight:600;padding:3px 8px;font-size:11px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
-.btn:hover{transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:var(--iic-ink);border:1px solid var(--iic-ink);border-radius:4px;transition:.15s}
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0}
+.bento-item{background:var(--bento-bg);padding:12px;border-radius:6px;border:1px solid var(--bento-border);transition:transform .15s,box-shadow .15s}
+.bento-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:var(--iic-amber);color:#fff;font-weight:600;font-size:10px;border-radius:50%;margin-bottom:8px}
+.bento-item h3{font-size:12px;font-weight:500;margin-bottom:4px;color:var(--text-primary)}
+.bento-item p{font-size:11px;color:var(--text-secondary);margin:0}
+.hero{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:16px 0}
+.hero-quote{font-family:"Georgia",serif;font-size:16px;font-weight:500;line-height:1.2;background:var(--iic-ivory);padding:12px 16px;border-left:4px solid var(--iic-amber)}
+.hero-desc{font-size:13px;color:var(--text-secondary)}
+.hero-img{display:flex;justify-content:center;padding:8px 0}
+.hero-img img{width:180px;height:auto;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.btn{display:inline-flex;align-items:center;background:var(--iic-amber);color:#fff;font-weight:600;padding:8px 16px;font-size:12px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.btn-secondary{background:transparent;color:var(--text-primary);border:2px solid var(--text-secondary);border-radius:6px;transition:.2s}
 .btn-secondary:hover{background:var(--iic-ivory);color:var(--iic-amber)}
-.img{display:flex;justify-content:center}
-.img img{width:160px;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
-.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:8px}
-.bento-item{background:#fff;padding:4px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:.15s}
-.bento-item:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,.08)}
-.bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;background:var(--iic-amber);color:#fff;font-weight:600;font-size:9px;border-radius:50%;margin-bottom:4px}
-.bento-item h3{font-size:11px;font-weight:500;margin-bottom:2px;letter-spacing:-.01em}
-.bento-item p{font-size:9px;color:#64665c;margin:0}
-.section{padding:6px 0;border-top:1px solid var(--iic-ink);font-size:11px}
+.steps{display:flex;flex-direction:column;gap:8px}
+.step{display:flex;align-items:flex-start;gap:8px}
+.step-num{background:var(--iic-amber);color:#fff;font-weight:600;padding:6px 10px;border-radius:4px;font-size:11px}
+.step-text strong{display:block;font-size:13px;margin-bottom:2px}
+.step-text small{color:var(--text-secondary);font-size:11px}
+.section{padding:20px 0;border-top:1px solid var(--bento-border);font-size:12px}
 .section:first-of-type{border-top:none}
 .section-bck{background:var(--iic-ivory)}
-.tag{font-size:9px;letter-spacing:.3em;color:#64665c;text-transform:uppercase;margin-bottom:4px}
-.title{font-family:"Georgia",serif;font-size:14px;font-weight:normal;line-height:1.05;margin-bottom:2px}
-.desc{color:#64665c;font-size:12px}
-.steps{display:flex;flex-direction:column;gap:4px}
-.step{display:flex;align-items:flex-start;gap:4px}
-.step-num{background:var(--iic-amber);color:#fff;font-weight:600;padding:2px 4px;border-radius:2px;font-size:9px}
-.step-text strong{display:block;font-size:11px}
-.step-text small{color:#64665c;font-size:9px}
-.footer{padding:4px 0;border-top:1px solid var(--iic-ink);text-align:center;color:#64665c;font-size:11px}
-.footer a{opacity:.5}
+.tag{font-size:10px;letter-spacing:.4em;color:#64665c;text-transform:uppercase;margin-bottom:4px;display:block}
+.title{font-family:"Georgia",serif;font-size:16px;font-weight:normal;line-height:1.1;margin-bottom:6px;color:var(--text-primary)}
+.desc{color:var(--text-secondary);font-size:13px;margin-bottom:8px}
+.footer{padding:12px 0;border-top:1px solid var(--bento-border);text-align:center;color:var(--text-secondary);font-size:11px}
+.footer a{opacity:.6;margin-left:8px;transition:opacity .2s}
 .footer a:hover{opacity:1}
 @media(max-width:768px){
-  .main{grid-template-columns:1fr;gap:8px;text-align:center}
+  .wrap{padding:12px 6px}
   .bento{grid-template-columns:1fr}
-  .wrap{padding:0 2px}
+  .hero-img img{width:140px}
+  .title{font-size:15px}
+  .logo{font-size:13px}
 }
 @media(max-width:480px){
-  .main{grid-template-columns:1fr;gap:8px}
-  .bento{grid-template-columns:1fr}
-  .title{font-size:13px}
+  .wrap{padding:8px 6px}
+  .bento{padding:10px}
+  .hero-quote{font-size:14px;padding:10px 12px}
 }
 </style>
 </head>
 <body>
 <header class="header"><div class="wrap">
-<a class="logo" href="#"><img src="favicon.svg" width="16" height="16" alt="IIC">IIC</a>
+<a class="logo" href="#"><img src="favicon.svg" alt="IIC">IIC</a>
 <nav class="nav"><a href="#work">Work</a><a href="#how">How</a><a href="#book">Book</a></nav>
 </div></header>
 <main class="wrap">
-<section class="main">
+<section class="hero">
 <div>
-<p class="quote">Make AI <em>understandable.</em><br><em>Useful.</em></p>
-<p class="desc" style="margin:4px 0">$50 | 60 min | Meet or Denver | Pay after</p>
-<div><a class="btn" href="#book">Book</a></div>
+<p class="hero-quote">Make AI <em>understandable.</em><br><em>Useful.</em></p>
+<p class="hero-desc">$50 | 60 min | Meet or Denver | Pay after</p>
 </div>
-<div class="img"><img src="assets/social-banner-hero.webp" alt="AI training"></div>
+<div class="hero-img"><img src="assets/social-banner-hero.webp" alt="AI training"></div>
 </section>
-<section id="work" class="section"><div class="wrap">
-<p class="tag">The work</p><h2 class="title">AI Training</h2>
-<p class="desc">Focus</p>
+<section id="work" class="section">
+<span class="tag">The work</span>
+<h2 class="title">AI Training</h2>
 <div class="bento">
-<article class="bento-item"><span class="num">1</span><h3>Workflows</h3><p>Checks</p></article>
-<article class="bento-item"><span class="num">2</span><h3>Prompts</h3><p>Issues</p></article>
-<article class="bento-item"><span class="num">3</span><h3>Scopes</h3><p>Scope</p></article>
-<article class="bento-item"><span class="num">4</span><h3>Tools</h3><p>Decisions</p></article>
+<article class="bento-item"><span class="num">1</span><h3>Workflows</h3><p>Checklists & best practices</p></article>
+<article class="bento-item"><span class="num">2</span><h3>Prompts</h3><p>Writing & refinement</p></article>
+<article class="bento-item"><span class="num">3</span><h3>Scoping</h3><p>Project planning</p></article>
+<article class="bento-item"><span class="num">4</span><h3>Tools</h3><p>AI assistants & integrations</p></article>
 </div>
-</div></section>
-<section id="how" class="section section-bck"><div class="wrap">
-<p class="tag">The session</p><h2 class="title">60 min</h2>
-<p class="desc">Pay after</p>
+</section>
+<section id="how" class="section section-bck">
+<span class="tag">The session</span>
+<h2 class="title">60 min • $50</h2>
 <div class="steps">
-<div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><small>Intro</small></div></div>
-<div class="step"><span class="step-num">02</span><div class="step-text"><strong>Focus</strong><small>Next steps</small></div></div>
+<div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><span style="color:var(--text-secondary);font-weight:400"> Intro & scope</span></div></div>
+<div class="step"><span class="step-num">02</span><div class="step-text"><strong>Flow</strong><span style="color:var(--text-secondary);font-weight:400"> Build & refine</span></div></div>
+<div class="step"><span class="step-num">03</span><div class="step-text"><strong>Finish</strong><span style="color:var(--text-secondary);font-weight:400"> Summary & next steps</span></div></div>
 </div>
-</div></section>
-<section id="book" class="section"><div class="wrap">
-<p class="tag">Book</p><h2 class="title">?</h2>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin:4px 0">
-<a class="btn" href="#">Request</a>
+</section>
+<section id="book" class="section">
+<span class="tag">Book</span>
+<h2 class="title">Ready to get started?</h2>
+<a class="btn" href="#">Request Session</a>
+<div style="margin:12px 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
 <a class="btn btn-secondary" href="tel:+17205077846">(720) 507-7846</a>
 </div>
-<p style="margin:0">$50/hr. Pay after.</p>
+<p style="color:var(--text-secondary);font-size:12px">Pay after session. Denver or Google Meet.</p>
 </div></section>
+</main>
 <footer class="footer"><div class="wrap"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
 </body>
 </html>
