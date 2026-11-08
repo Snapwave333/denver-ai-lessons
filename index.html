@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>IIC | AI Training</title>
 <meta name="description" content="One-on-one AI consultant training: $50/60min. Denver or Google Meet.">
 <meta property="og:title" content="IIC | AI Training">
@@ -13,104 +13,102 @@
 <meta name="theme-color" content="#F77F00">
 <link rel="icon" href="favicon.ico">
 <style>
-:root{
-  --iic-amber:#F77F00;--iic-vermilion:#E65100;--iic-crimson:#C62828;--iic-ink:#171717;--iic-ivory:#FFFDF9;--iic-night:#211716;
-  --bento-bg:#fff;--bento-border:#eee;--text-primary:#171717;--text-secondary:#64665c
-}
+:root{--am:#F77F00;--ver:#E65100;--cr:#C62828;--ink:#171717;--iv:#FFFDF9;--txt:#64665c;--radius:6px}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body,min-height:100%;background:var(--iic-ivory);color:var(--text-primary);font-family:"Inter",system-ui,sans-serif;font-size:14px;line-height:1.4
+html,body{min-height:100%;background:var(--iv);color:var(--ink);font-family:"Inter",system-ui,sans-serif;font-size:13px;line-height:1.3}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:900px;margin:auto;padding:12px 8px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--bento-border)}
-.logo{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}
-.logo img{width:18px;height:18px}
-.nav a{font-size:11px;opacity:.6;margin-left:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-secondary);transition:opacity .2s}
+.wrapper{max-width:800px;margin:0 auto;padding:0 6px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #e0e0e0}
+.logo{font-size:13px;font-weight:600;display:flex;align-items:center;gap:4px}
+.logo img{width:14px;height:14px}
+.nav a{font-size:10px;opacity:.6;margin-left:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--txt);transition:opacity .15s}
 .nav a:hover{opacity:1}
-.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0}
-.bento-item{background:var(--bento-bg);padding:12px;border-radius:6px;border:1px solid var(--bento-border);transition:transform .15s,box-shadow .15s}
-.bento-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:var(--iic-amber);color:#fff;font-weight:600;font-size:10px;border-radius:50%;margin-bottom:8px}
-.bento-item h3{font-size:12px;font-weight:500;margin-bottom:4px;color:var(--text-primary)}
-.bento-item p{font-size:11px;color:var(--text-secondary);margin:0}
-.hero{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;padding:16px 0}
-.hero-quote{font-family:"Georgia",serif;font-size:16px;font-weight:500;line-height:1.2;background:var(--iic-ivory);padding:12px 16px;border-left:4px solid var(--iic-amber)}
-.hero-desc{font-size:13px;color:var(--text-secondary)}
-.hero-img{display:flex;justify-content:center;padding:8px 0}
-.hero-img img{width:180px;height:auto;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.btn{display:inline-flex;align-items:center;background:var(--iic-amber);color:#fff;font-weight:600;padding:8px 16px;font-size:12px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
-.btn-secondary{background:transparent;color:var(--text-primary);border:2px solid var(--text-secondary);border-radius:6px;transition:.2s}
-.btn-secondary:hover{background:var(--iic-ivory);color:var(--iic-amber)}
-.steps{display:flex;flex-direction:column;gap:8px}
-.step{display:flex;align-items:flex-start;gap:8px}
-.step-num{background:var(--iic-amber);color:#fff;font-weight:600;padding:6px 10px;border-radius:4px;font-size:11px}
-.step-text strong{display:block;font-size:13px;margin-bottom:2px}
-.step-text small{color:var(--text-secondary);font-size:11px}
-.section{padding:20px 0;border-top:1px solid var(--bento-border);font-size:12px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:6px 0;line-height:1.2}
+.quote{font-family:"Georgia",serif;font-size:14px;font-weight:600;line-height:1.1;background:var(--iv);padding:6px 10px;border-left:3px solid var(--am);margin:6px 0}
+.price{font-size:12px;color:var(--txt)}
+.hero-img{margin-top:6px}
+.hero-img img{width:100px;height:auto;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.btn{display:inline-flex;align-items:center;background:var(--am);color:#fff;font-weight:500;padding:5px 12px;font-size:11px;border-radius:var(--radius);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 2px 5px rgba(0,0,0,.1)}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--txt);border-radius:var(--radius);transition:.15s;font-size:11px;padding:5px 12px}
+.btn-secondary:hover{background:var(--iv);color:var(--am)}
+.section{padding:8px 0;border-top:1px solid #e0e0e0;font-size:12px}
 .section:first-of-type{border-top:none}
-.section-bck{background:var(--iic-ivory)}
-.tag{font-size:10px;letter-spacing:.4em;color:#64665c;text-transform:uppercase;margin-bottom:4px;display:block}
-.title{font-family:"Georgia",serif;font-size:16px;font-weight:normal;line-height:1.1;margin-bottom:6px;color:var(--text-primary)}
-.desc{color:var(--text-secondary);font-size:13px;margin-bottom:8px}
-.footer{padding:12px 0;border-top:1px solid var(--bento-border);text-align:center;color:var(--text-secondary);font-size:11px}
-.footer a{opacity:.6;margin-left:8px;transition:opacity .2s}
+.section-bck{background:var(--iv)}
+.tag{font-size:9px;letter-spacing:.4em;color:var(--txt);text-transform:uppercase;margin-bottom:3px;display:block}
+.title{font-family:"Georgia",serif;font-size:14px;font-weight:normal;line-height:1.1;margin-bottom:3px;color:var(--ink)}
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin:8px 0}
+.bento-item{background:#fff;padding:10px;border-radius:var(--radius);border:1px solid #f0f0f0;transition:transform .15s,box-shadow .15s}
+.bento-item:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.bento-item .num{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;background:var(--am);color:#fff;font-weight:600;font-size:8px;border-radius:50%;margin-bottom:4px}
+.bento-item h3{font-size:11px;font-weight:500;margin-bottom:2px;color:var(--ink)}
+.bento-item p{font-size:10px;color:var(--txt);margin:0}
+.steps{display:flex;flex-direction:column;gap:4px}
+.step{display:flex;align-items:flex-start;gap:6px;font-size:10px}
+.step-num{background:var(--am);color:#fff;font-weight:600;padding:3px 6px;border-radius:3px}
+.step-text strong{display:block;color:var(--ink);margin-bottom:2px}
+.step-text small{color:var(--txt)}
+.footer{padding:8px 0;border-top:1px solid #e0e0e0;text-align:center;color:var(--txt);font-size:10px}
+.footer a{opacity:.6;margin-left:8px;transition:opacity .15s}
 .footer a:hover{opacity:1}
+.cta-wrapper{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0}
+.cta-note{color:var(--txt);font-size:10px}
 @media(max-width:768px){
-  .wrap{padding:12px 6px}
+  .wrapper{padding:0 4px}
   .bento{grid-template-columns:1fr}
-  .hero-img img{width:140px}
-  .title{font-size:15px}
-  .logo{font-size:13px}
+  .hero-img img{width:80px}
+  .quote{font-size:13px;padding:5px 8px}
+  .title{font-size:13px}
+  .nav a{margin-left:10px}
+  .section{padding:6px 0}
+  .bento{margin:6px 0}
 }
 @media(max-width:480px){
-  .wrap{padding:8px 6px}
-  .bento{padding:10px}
-  .hero-quote{font-size:14px;padding:10px 12px}
-}
-</style>
+  .wrapper{padding:0 3px}
+  .bento-item{padding:8px}
+  .bento{gap:4px}
+}</style>
 </head>
 <body>
-<header class="header"><div class="wrap">
+<header class="header"><div class="wrapper">
 <a class="logo" href="#"><img src="favicon.svg" alt="IIC">IIC</a>
 <nav class="nav"><a href="#work">Work</a><a href="#how">How</a><a href="#book">Book</a></nav>
 </div></header>
-<main class="wrap">
+<main class="wrapper">
 <section class="hero">
-<div>
-<p class="hero-quote">Make AI <em>understandable.</em><br><em>Useful.</em></p>
-<p class="hero-desc">$50 | 60 min | Meet or Denver | Pay after</p>
-</div>
+<h1 class="quote">Make AI <em>understandable.</em><br><em>Useful.</em></h1>
+<p class="price">$50 | 60 min | Meet or Denver | Pay after</p>
 <div class="hero-img"><img src="assets/social-banner-hero.webp" alt="AI training"></div>
 </section>
 <section id="work" class="section">
 <span class="tag">The work</span>
 <h2 class="title">AI Training</h2>
 <div class="bento">
-<article class="bento-item"><span class="num">1</span><h3>Workflows</h3><p>Checklists & best practices</p></article>
-<article class="bento-item"><span class="num">2</span><h3>Prompts</h3><p>Writing & refinement</p></article>
+<article class="bento-item"><span class="num">1</span><h3>Workflows</h3><p>Best practices & protocols</p></article>
+<article class="bento-item"><span class="num">2</span><h3>Prompts</h3><p>Writing & optimization</p></article>
 <article class="bento-item"><span class="num">3</span><h3>Scoping</h3><p>Project planning</p></article>
-<article class="bento-item"><span class="num">4</span><h3>Tools</h3><p>AI assistants & integrations</p></article>
+<article class="bento-item"><span class="num">4</span><h3>Tools</h3><p>Integrations & setup</p></article>
 </div>
 </section>
 <section id="how" class="section section-bck">
 <span class="tag">The session</span>
-<h2 class="title">60 min • $50</h2>
+<h2 class="title">60 min | $50</h2>
 <div class="steps">
-<div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><span style="color:var(--text-secondary);font-weight:400"> Intro & scope</span></div></div>
-<div class="step"><span class="step-num">02</span><div class="step-text"><strong>Flow</strong><span style="color:var(--text-secondary);font-weight:400"> Build & refine</span></div></div>
-<div class="step"><span class="step-num">03</span><div class="step-text"><strong>Finish</strong><span style="color:var(--text-secondary);font-weight:400"> Summary & next steps</span></div></div>
+<div class="step"><span class="step-num">01</span><div class="step-text"><strong>Work?</strong><small>Intro & scope</small></div></div>
+<div class="step"><span class="step-num">02</span><div class="step-text"><strong>Flow</strong><small>Build & refine</small></div></div>
+<div class="step"><span class="step-num">03</span><div class="step-text"><strong>Finish</strong><small>Summary & next steps</small></div></div>
 </div>
 </section>
 <section id="book" class="section">
 <span class="tag">Book</span>
 <h2 class="title">Ready to get started?</h2>
+<div class="cta-wrapper">
 <a class="btn" href="#">Request Session</a>
-<div style="margin:12px 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
 <a class="btn btn-secondary" href="tel:+17205077846">(720) 507-7846</a>
 </div>
-<p style="color:var(--text-secondary);font-size:12px">Pay after session. Denver or Google Meet.</p>
-</div></section>
+<p class="cta-note">Pay after session. Denver or Google Meet.</p>
+</section>
 </main>
-<footer class="footer"><div class="wrap"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
+<footer class="footer"><div class="wrapper"><span>IIC · Eli</span><a href="#">Top</a></div></footer>
 </body>
 </html>
